@@ -1,0 +1,2091 @@
+{
+	"info": {
+		"_postman_id": "f6447af1-a2d5-4a1a-92c4-b4750ff59ecc",
+		"name": "adnin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49020727"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "booking",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/booking",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"booking"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/booking",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"booking"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 24 Dec 2025 13:21:21 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": 3,\n        \"client_id\": 1,\n        \"start_date\": \"2011-12-12\",\n        \"end_date\": \"2012-12-12\",\n        \"total_price\": \"28203.96\",\n        \"status\": \"confirmed\",\n        \"owner_approval\": \"pending\",\n        \"created_at\": \"2025-12-24T03:06:25.000000Z\",\n        \"updated_at\": \"2025-12-24T03:19:36.000000Z\",\n        \"client\": {\n            \"id\": 1,\n            \"role_id\": 2,\n            \"first_name\": \"muhammad\",\n            \"last_name\": \"alnabky\",\n            \"phone\": \"0999999999\",\n            \"birth_date\": \"1996-02-11\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"approved\",\n            \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n            \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n        },\n        \"changes\": [\n            {\n                \"id\": 1,\n                \"booking_id\": 3,\n                \"changed_by\": \"admin\",\n                \"old_status\": \"pending\",\n                \"new_status\": \"confirmed\",\n                \"notes\": null,\n                \"created_at\": \"2025-12-24T03:19:36.000000Z\",\n                \"updated_at\": \"2025-12-24T03:19:36.000000Z\"\n            }\n        ],\n        \"change_reservation\": {\n            \"id\": 3,\n            \"change_id\": 1,\n            \"booking_id\": 3,\n            \"owner_id\": 2,\n            \"apartment_id\": 3,\n            \"created_at\": \"2025-12-24T03:06:25.000000Z\",\n            \"updated_at\": \"2025-12-24T03:19:36.000000Z\",\n            \"apartment\": {\n                \"id\": 3,\n                \"owner_id\": 2,\n                \"title\": \"Iure beatae est.\",\n                \"description\": \"Eum aspernatur aspernatur voluptatem unde repellat. Nulla debitis minima reprehenderit pariatur modi. Ea facilis saepe aut magni.\",\n                \"city\": \"Braedenton\",\n                \"Governorate\": \"Sao Tome and Principe\",\n                \"address\": \"1596 Cornell Road\\nLynchstad, HI 10898-4760\",\n                \"price_per_day\": \"77.06\",\n                \"rooms\": 1,\n                \"bathrooms\": 3,\n                \"area\": \"126.05\",\n                \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n            }\n        }\n    },\n    {\n        \"id\": 2,\n        \"client_id\": 1,\n        \"start_date\": \"2021-12-12\",\n        \"end_date\": \"2022-12-12\",\n        \"total_price\": \"28126.90\",\n        \"status\": \"pending\",\n        \"owner_approval\": \"pending\",\n        \"created_at\": \"2025-12-24T03:06:13.000000Z\",\n        \"updated_at\": \"2025-12-24T03:06:13.000000Z\",\n        \"client\": {\n            \"id\": 1,\n            \"role_id\": 2,\n            \"first_name\": \"muhammad\",\n            \"last_name\": \"alnabky\",\n            \"phone\": \"0999999999\",\n            \"birth_date\": \"1996-02-11\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"approved\",\n            \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n            \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n        },\n        \"changes\": [],\n        \"change_reservation\": {\n            \"id\": 2,\n            \"change_id\": null,\n            \"booking_id\": 2,\n            \"owner_id\": 2,\n            \"apartment_id\": 3,\n            \"created_at\": \"2025-12-24T03:06:13.000000Z\",\n            \"updated_at\": \"2025-12-24T03:06:13.000000Z\",\n            \"apartment\": {\n                \"id\": 3,\n                \"owner_id\": 2,\n                \"title\": \"Iure beatae est.\",\n                \"description\": \"Eum aspernatur aspernatur voluptatem unde repellat. Nulla debitis minima reprehenderit pariatur modi. Ea facilis saepe aut magni.\",\n                \"city\": \"Braedenton\",\n                \"Governorate\": \"Sao Tome and Principe\",\n                \"address\": \"1596 Cornell Road\\nLynchstad, HI 10898-4760\",\n                \"price_per_day\": \"77.06\",\n                \"rooms\": 1,\n                \"bathrooms\": 3,\n                \"area\": \"126.05\",\n                \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n            }\n        }\n    },\n    {\n        \"id\": 1,\n        \"client_id\": 1,\n        \"start_date\": \"2023-12-12\",\n        \"end_date\": \"2024-12-12\",\n        \"total_price\": \"28203.96\",\n        \"status\": \"pending\",\n        \"owner_approval\": \"pending\",\n        \"created_at\": \"2025-12-24T03:05:57.000000Z\",\n        \"updated_at\": \"2025-12-24T03:05:57.000000Z\",\n        \"client\": {\n            \"id\": 1,\n            \"role_id\": 2,\n            \"first_name\": \"muhammad\",\n            \"last_name\": \"alnabky\",\n            \"phone\": \"0999999999\",\n            \"birth_date\": \"1996-02-11\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"approved\",\n            \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n            \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n        },\n        \"changes\": [],\n        \"change_reservation\": {\n            \"id\": 1,\n            \"change_id\": null,\n            \"booking_id\": 1,\n            \"owner_id\": 2,\n            \"apartment_id\": 3,\n            \"created_at\": \"2025-12-24T03:05:57.000000Z\",\n            \"updated_at\": \"2025-12-24T03:05:57.000000Z\",\n            \"apartment\": {\n                \"id\": 3,\n                \"owner_id\": 2,\n                \"title\": \"Iure beatae est.\",\n                \"description\": \"Eum aspernatur aspernatur voluptatem unde repellat. Nulla debitis minima reprehenderit pariatur modi. Ea facilis saepe aut magni.\",\n                \"city\": \"Braedenton\",\n                \"Governorate\": \"Sao Tome and Principe\",\n                \"address\": \"1596 Cornell Road\\nLynchstad, HI 10898-4760\",\n                \"price_per_day\": \"77.06\",\n                \"rooms\": 1,\n                \"bathrooms\": 3,\n                \"area\": \"126.05\",\n                \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n            }\n        }\n    }\n]"
+								}
+							]
+						},
+						{
+							"name": "update Status/{id}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/booking/updateStatus/1?status=confirmed",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"booking",
+										"updateStatus",
+										"1"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "confirmed"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/booking/updateStatus/{id}?status=confirmed",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"booking",
+												"updateStatus",
+												"{id}"
+											],
+											"query": [
+												{
+													"key": "status",
+													"value": "confirmed"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:59:09 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Booking not found\"\n}"
+								},
+								{
+									"name": "Status",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/booking/updateStatus/1?status=confirme",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"booking",
+												"updateStatus",
+												"1"
+											],
+											"query": [
+												{
+													"key": "status",
+													"value": "confirme"
+												}
+											]
+										}
+									},
+									"status": "Unprocessable Content",
+									"code": 422,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 11:04:16 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Status must be pending or confirmed or cancelled.\",\n    \"errors\": {\n        \"status\": [\n            \"Status must be pending or confirmed or cancelled.\"\n        ]\n    }\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/booking/updateStatus/1?status=confirmed",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"booking",
+												"updateStatus",
+												"1"
+											],
+											"query": [
+												{
+													"key": "status",
+													"value": "confirmed"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 24 Dec 2025 13:22:17 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Status updated successfully\",\n    \"booking\": {\n        \"id\": 1,\n        \"client_id\": 1,\n        \"start_date\": \"2023-12-12\",\n        \"end_date\": \"2024-12-12\",\n        \"total_price\": \"28203.96\",\n        \"status\": \"confirmed\",\n        \"owner_approval\": \"pending\",\n        \"created_at\": \"2025-12-24T03:05:57.000000Z\",\n        \"updated_at\": \"2025-12-24T13:22:17.000000Z\"\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY0OTI5ODA1LCJleHAiOjE3NjQ5MzM0MDUsIm5iZiI6MTc2NDkyOTgwNSwianRpIjoiNjl5VzdBd2tpTHFUcmVhMSIsInN1YiI6IjEyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.cztRtEVeKJ8g_kjt--3yLUE1aQT3EuhcOTe8BxmNOh4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/index",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"index"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthenticated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/index",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"index"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:15:53 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/index",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"index"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 24 Dec 2025 13:24:08 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"count\": 9,\n    \"users\": [\n        {\n            \"id\": 1,\n            \"role_id\": 2,\n            \"first_name\": \"muhammad\",\n            \"last_name\": \"alnabky\",\n            \"phone\": \"0999999999\",\n            \"birth_date\": \"1996-02-11\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"approved\",\n            \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n            \"updated_at\": \"2025-12-24T02:30:58.000000Z\",\n            \"role\": {\n                \"id\": 2,\n                \"name\": \"admin\",\n                \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n                \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n            },\n            \"favorites\": [],\n            \"sent_messages\": [],\n            \"received_messages\": [],\n            \"apartments\": [\n                {\n                    \"id\": 5,\n                    \"owner_id\": 1,\n                    \"title\": \"Maxime totam aliquid ipsa consequatur.\",\n                    \"description\": \"Quia natus distinctio qui et. Vero libero sint commodi voluptas et quidem. Nihil molestias vel quam et aliquam enim voluptas. Nihil dolorum ipsam harum dolorum magnam error.\",\n                    \"city\": \"Lake Ebbafort\",\n                    \"Governorate\": \"Libyan Arab Jamahiriya\",\n                    \"address\": \"235 Jaleel Walk\\nDavontemouth, AR 77795\",\n                    \"price_per_day\": \"114.67\",\n                    \"rooms\": 2,\n                    \"bathrooms\": 2,\n                    \"area\": \"141.44\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                },\n                {\n                    \"id\": 15,\n                    \"owner_id\": 1,\n                    \"title\": \"Dolores aut voluptatem sint.\",\n                    \"description\": \"Praesentium at enim incidunt. Iste facilis est odit commodi quis. Dolore aut accusantium vitae ut libero asperiores alias. Omnis in maiores porro temporibus itaque.\",\n                    \"city\": \"Alexandrehaven\",\n                    \"Governorate\": \"Tokelau\",\n                    \"address\": \"915 Mills Inlet\\nLake Crystal, NM 70977-9936\",\n                    \"price_per_day\": \"92.89\",\n                    \"rooms\": 4,\n                    \"bathrooms\": 1,\n                    \"area\": \"228.85\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                }\n            ],\n            \"bookings\": [\n                {\n                    \"id\": 1,\n                    \"client_id\": 1,\n                    \"start_date\": \"2023-12-12\",\n                    \"end_date\": \"2024-12-12\",\n                    \"total_price\": \"28203.96\",\n                    \"status\": \"confirmed\",\n                    \"owner_approval\": \"pending\",\n                    \"created_at\": \"2025-12-24T03:05:57.000000Z\",\n                    \"updated_at\": \"2025-12-24T13:22:17.000000Z\"\n                },\n                {\n                    \"id\": 2,\n                    \"client_id\": 1,\n                    \"start_date\": \"2021-12-12\",\n                    \"end_date\": \"2022-12-12\",\n                    \"total_price\": \"28126.90\",\n                    \"status\": \"pending\",\n                    \"owner_approval\": \"pending\",\n                    \"created_at\": \"2025-12-24T03:06:13.000000Z\",\n                    \"updated_at\": \"2025-12-24T03:06:13.000000Z\"\n                },\n                {\n                    \"id\": 3,\n                    \"client_id\": 1,\n                    \"start_date\": \"2011-12-12\",\n                    \"end_date\": \"2012-12-12\",\n                    \"total_price\": \"28203.96\",\n                    \"status\": \"confirmed\",\n                    \"owner_approval\": \"pending\",\n                    \"created_at\": \"2025-12-24T03:06:25.000000Z\",\n                    \"updated_at\": \"2025-12-24T03:19:36.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"role_id\": 1,\n            \"first_name\": \"Lottie\",\n            \"last_name\": \"Nienow\",\n            \"phone\": \"669-828-4992\",\n            \"birth_date\": \"1989-08-14\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"pending \",\n            \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"updated_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"role\": {\n                \"id\": 1,\n                \"name\": \"client\",\n                \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n                \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n            },\n            \"favorites\": [],\n            \"sent_messages\": [],\n            \"received_messages\": [],\n            \"apartments\": [\n                {\n                    \"id\": 3,\n                    \"owner_id\": 2,\n                    \"title\": \"Iure beatae est.\",\n                    \"description\": \"Eum aspernatur aspernatur voluptatem unde repellat. Nulla debitis minima reprehenderit pariatur modi. Ea facilis saepe aut magni.\",\n                    \"city\": \"Braedenton\",\n                    \"Governorate\": \"Sao Tome and Principe\",\n                    \"address\": \"1596 Cornell Road\\nLynchstad, HI 10898-4760\",\n                    \"price_per_day\": \"77.06\",\n                    \"rooms\": 1,\n                    \"bathrooms\": 3,\n                    \"area\": \"126.05\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                },\n                {\n                    \"id\": 4,\n                    \"owner_id\": 2,\n                    \"title\": \"Et labore laudantium.\",\n                    \"description\": \"Dicta saepe vero voluptatibus atque est. Iure reprehenderit rerum aut laudantium et perspiciatis. Quibusdam molestiae id dolor ex soluta suscipit assumenda.\",\n                    \"city\": \"North Freeda\",\n                    \"Governorate\": \"Korea\",\n                    \"address\": \"52092 Deckow Underpass\\nWest Shemarton, IA 44996\",\n                    \"price_per_day\": \"77.73\",\n                    \"rooms\": 5,\n                    \"bathrooms\": 1,\n                    \"area\": \"239.55\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                },\n                {\n                    \"id\": 11,\n                    \"owner_id\": 2,\n                    \"title\": \"Aspernatur nihil recusandae.\",\n                    \"description\": \"Consequatur sit quisquam quam saepe dolorem explicabo. Qui mollitia aspernatur rem nihil illum. Consequuntur omnis sapiente veniam fugit aperiam corrupti. Quia velit officiis exercitationem porro.\",\n                    \"city\": \"Oberbrunnerfurt\",\n                    \"Governorate\": \"Honduras\",\n                    \"address\": \"39774 Abshire Underpass\\nNorth Porter, WY 72269-3719\",\n                    \"price_per_day\": \"24.66\",\n                    \"rooms\": 1,\n                    \"bathrooms\": 1,\n                    \"area\": \"204.36\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                },\n                {\n                    \"id\": 18,\n                    \"owner_id\": 2,\n                    \"title\": \"Nam quas molestiae sit.\",\n                    \"description\": \"Et blanditiis autem animi aut aliquam necessitatibus aliquam. Numquam perferendis voluptas voluptatem dolores et.\",\n                    \"city\": \"North Idellfort\",\n                    \"Governorate\": \"Korea\",\n                    \"address\": \"542 Khalil Streets\\nPort Lexie, AL 37206\",\n                    \"price_per_day\": \"29.43\",\n                    \"rooms\": 4,\n                    \"bathrooms\": 3,\n                    \"area\": \"206.28\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                }\n            ],\n            \"bookings\": []\n        },\n        {\n            \"id\": 4,\n            \"role_id\": 1,\n            \"first_name\": \"Judah\",\n            \"last_name\": \"Hane\",\n            \"phone\": \"1-432-261-2538\",\n            \"birth_date\": \"1985-08-06\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"rejected\",\n            \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"updated_at\": \"2025-12-24T03:14:40.000000Z\",\n            \"role\": {\n                \"id\": 1,\n                \"name\": \"client\",\n                \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n                \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n            },\n            \"favorites\": [],\n            \"sent_messages\": [],\n            \"received_messages\": [],\n            \"apartments\": [\n                {\n                    \"id\": 17,\n                    \"owner_id\": 4,\n                    \"title\": \"Eligendi accusantium vel temporibus.\",\n                    \"description\": \"Dolores ratione aut beatae voluptatibus omnis officiis facere. Tenetur blanditiis enim numquam est quos totam. Quaerat maxime qui porro facilis nobis.\",\n                    \"city\": \"New Geoffrey\",\n                    \"Governorate\": \"Gibraltar\",\n                    \"address\": \"20020 Bradtke Stream\\nPort Kamronbury, AR 30923-5166\",\n                    \"price_per_day\": \"171.07\",\n                    \"rooms\": 5,\n                    \"bathrooms\": 3,\n                    \"area\": \"53.47\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                }\n            ],\n            \"bookings\": []\n        },\n        {\n            \"id\": 5,\n            \"role_id\": 1,\n            \"first_name\": \"Lindsey\",\n            \"last_name\": \"Wilkinson\",\n            \"phone\": \"260-888-7965\",\n            \"birth_date\": \"2017-11-09\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"approved\",\n            \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"updated_at\": \"2025-12-24T02:51:26.000000Z\",\n            \"role\": {\n                \"id\": 1,\n                \"name\": \"client\",\n                \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n                \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n            },\n            \"favorites\": [],\n            \"sent_messages\": [],\n            \"received_messages\": [],\n            \"apartments\": [\n                {\n                    \"id\": 8,\n                    \"owner_id\": 5,\n                    \"title\": \"Quibusdam eos eum qui consequuntur.\",\n                    \"description\": \"In ut voluptas minima autem id ratione dolores. Perspiciatis minima at cumque laudantium. Quaerat est molestiae voluptatem voluptatibus at.\",\n                    \"city\": \"Donnaport\",\n                    \"Governorate\": \"Kazakhstan\",\n                    \"address\": \"31480 Grant Mews Apt. 466\\nHoegerborough, MT 59101\",\n                    \"price_per_day\": \"131.86\",\n                    \"rooms\": 5,\n                    \"bathrooms\": 3,\n                    \"area\": \"199.37\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                }\n            ],\n            \"bookings\": []\n        },\n        {\n            \"id\": 6,\n            \"role_id\": 1,\n            \"first_name\": \"Micaela\",\n            \"last_name\": \"Morissette\",\n            \"phone\": \"458-492-6281\",\n            \"birth_date\": \"1996-01-29\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"approved\",\n            \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"updated_at\": \"2025-12-24T02:51:21.000000Z\",\n            \"role\": {\n                \"id\": 1,\n                \"name\": \"client\",\n                \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n                \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n            },\n            \"favorites\": [],\n            \"sent_messages\": [],\n            \"received_messages\": [],\n            \"apartments\": [\n                {\n                    \"id\": 7,\n                    \"owner_id\": 6,\n                    \"title\": \"Veniam ullam.\",\n                    \"description\": \"Inventore dolores in sit non exercitationem. Temporibus autem error harum placeat velit repellat.\",\n                    \"city\": \"Nikotown\",\n                    \"Governorate\": \"Nepal\",\n                    \"address\": \"347 Wilkinson Radial Suite 834\\nKreigerbury, LA 18512\",\n                    \"price_per_day\": \"78.86\",\n                    \"rooms\": 3,\n                    \"bathrooms\": 1,\n                    \"area\": \"107.64\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                }\n            ],\n            \"bookings\": []\n        },\n        {\n            \"id\": 7,\n            \"role_id\": 1,\n            \"first_name\": \"Vivianne\",\n            \"last_name\": \"Stanton\",\n            \"phone\": \"+1-629-851-7589\",\n            \"birth_date\": \"2000-07-25\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"approved\",\n            \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"updated_at\": \"2025-12-24T02:51:12.000000Z\",\n            \"role\": {\n                \"id\": 1,\n                \"name\": \"client\",\n                \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n                \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n            },\n            \"favorites\": [],\n            \"sent_messages\": [],\n            \"received_messages\": [],\n            \"apartments\": [\n                {\n                    \"id\": 9,\n                    \"owner_id\": 7,\n                    \"title\": \"Dolorem ducimus earum voluptatem.\",\n                    \"description\": \"Aut eum nesciunt blanditiis veritatis consectetur at est error. Dolor omnis voluptatem aliquid qui error reprehenderit. Distinctio error ad est sunt et.\",\n                    \"city\": \"Hilpertborough\",\n                    \"Governorate\": \"Saint Pierre and Miquelon\",\n                    \"address\": \"417 Kuvalis Trail\\nPort Pansy, MO 96032\",\n                    \"price_per_day\": \"189.88\",\n                    \"rooms\": 4,\n                    \"bathrooms\": 1,\n                    \"area\": \"132.78\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                },\n                {\n                    \"id\": 10,\n                    \"owner_id\": 7,\n                    \"title\": \"Ut eveniet laudantium eveniet.\",\n                    \"description\": \"Quo iusto ut occaecati et voluptas odio. A perferendis soluta quia suscipit qui perspiciatis. Qui explicabo corrupti dolorem optio consectetur a ut.\",\n                    \"city\": \"North Chelsey\",\n                    \"Governorate\": \"Yemen\",\n                    \"address\": \"20573 Armstrong Neck\\nLake Cloydland, DC 61647\",\n                    \"price_per_day\": \"115.87\",\n                    \"rooms\": 4,\n                    \"bathrooms\": 3,\n                    \"area\": \"132.85\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                }\n            ],\n            \"bookings\": []\n        },\n        {\n            \"id\": 10,\n            \"role_id\": 1,\n            \"first_name\": \"Domenic\",\n            \"last_name\": \"Gislason\",\n            \"phone\": \"820.808.2628\",\n            \"birth_date\": \"1978-09-01\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"pending \",\n            \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"updated_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"role\": {\n                \"id\": 1,\n                \"name\": \"client\",\n                \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n                \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n            },\n            \"favorites\": [],\n            \"sent_messages\": [],\n            \"received_messages\": [],\n            \"apartments\": [\n                {\n                    \"id\": 1,\n                    \"owner_id\": 10,\n                    \"title\": \"Dignissimos et.\",\n                    \"description\": \"Impedit velit doloremque sed aut. Illum perferendis consequatur nostrum dolorum. Quaerat minus qui adipisci.\",\n                    \"city\": \"North Jerod\",\n                    \"Governorate\": \"Papua New Guinea\",\n                    \"address\": \"19993 Hunter Streets\\nNew Dessieshire, VA 13145\",\n                    \"price_per_day\": \"48.99\",\n                    \"rooms\": 4,\n                    \"bathrooms\": 3,\n                    \"area\": \"222.97\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                },\n                {\n                    \"id\": 19,\n                    \"owner_id\": 10,\n                    \"title\": \"Aut neque dolorem.\",\n                    \"description\": \"Pariatur esse ut voluptatem eligendi. Qui ducimus aliquam quasi et possimus minima. Dolor quibusdam non deleniti.\",\n                    \"city\": \"New Wilbermouth\",\n                    \"Governorate\": \"Canada\",\n                    \"address\": \"5848 Jada Junction\\nMarkshaven, GA 77130\",\n                    \"price_per_day\": \"119.33\",\n                    \"rooms\": 5,\n                    \"bathrooms\": 3,\n                    \"area\": \"90.62\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                }\n            ],\n            \"bookings\": []\n        },\n        {\n            \"id\": 11,\n            \"role_id\": 1,\n            \"first_name\": \"Oleta\",\n            \"last_name\": \"Bartell\",\n            \"phone\": \"+1 (339) 350-2948\",\n            \"birth_date\": \"2001-10-22\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"pending \",\n            \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"updated_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"role\": {\n                \"id\": 1,\n                \"name\": \"client\",\n                \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n                \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n            },\n            \"favorites\": [],\n            \"sent_messages\": [],\n            \"received_messages\": [],\n            \"apartments\": [\n                {\n                    \"id\": 2,\n                    \"owner_id\": 11,\n                    \"title\": \"Atque quod ea ut.\",\n                    \"description\": \"Ex aut modi aut consequatur qui expedita repellendus. Exercitationem voluptas quam veritatis totam eaque. Unde est dignissimos sit et nam. Dolorum magni cupiditate at fugit ad omnis.\",\n                    \"city\": \"West Wilhelmine\",\n                    \"Governorate\": \"Belarus\",\n                    \"address\": \"25460 Boyle Harbor Suite 186\\nFabiolachester, VA 08507-9194\",\n                    \"price_per_day\": \"52.15\",\n                    \"rooms\": 2,\n                    \"bathrooms\": 1,\n                    \"area\": \"97.54\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                },\n                {\n                    \"id\": 20,\n                    \"owner_id\": 11,\n                    \"title\": \"Dolores ut sequi et.\",\n                    \"description\": \"Hic aut harum asperiores laboriosam perspiciatis et aspernatur labore. Vitae quia deleniti est ex. Quia neque consectetur sed omnis odio illo.\",\n                    \"city\": \"North Jaylon\",\n                    \"Governorate\": \"Heard Island and McDonald Islands\",\n                    \"address\": \"7953 Colby Union\\nPacochashire, MA 48203-6444\",\n                    \"price_per_day\": \"151.76\",\n                    \"rooms\": 1,\n                    \"bathrooms\": 3,\n                    \"area\": \"115.38\",\n                    \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                    \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n                }\n            ],\n            \"bookings\": []\n        },\n        {\n            \"id\": 12,\n            \"role_id\": 1,\n            \"first_name\": \"name\",\n            \"last_name\": \"last name\",\n            \"phone\": \"+96399976454\",\n            \"birth_date\": \"2012-09-11\",\n            \"profile_image\": \"http://127.0.0.1:8000/uploads/users/1766581679_profile_694be5aff225d.jpg\",\n            \"id_image\": \"http://127.0.0.1:8000/uploads/users/1766581680_id_694be5b000def.png\",\n            \"gender\": \"male\",\n            \"status\": \"approved\",\n            \"created_at\": \"2025-12-24T13:08:00.000000Z\",\n            \"updated_at\": \"2025-12-24T13:08:00.000000Z\",\n            \"role\": {\n                \"id\": 1,\n                \"name\": \"client\",\n                \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n                \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n            },\n            \"favorites\": [],\n            \"sent_messages\": [],\n            \"received_messages\": [],\n            \"apartments\": [],\n            \"bookings\": []\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "approved Users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/approved",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"approved"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthenticated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/index",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"index"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:15:53 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/approved",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"approved"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:30:55 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"count\": 1,\n    \"users\": [\n        {\n            \"id\": 12,\n            \"role_id\": 1,\n            \"first_name\": \"muhammad\",\n            \"last_name\": \"alnabky\",\n            \"phone\": \"963993168005\",\n            \"birth_date\": \"1999-01-10\",\n            \"profile_image\": \"ttttttttttttttttttttttttttttttttttttttt\",\n            \"id_image\": \"eeeeeeeeeeeeeeeeeeeeeeeeeeeee\",\n            \"gender\": \"male\",\n            \"status\": \"approved\",\n            \"created_at\": \"2025-12-04T18:02:12.000000Z\",\n            \"updated_at\": \"2025-12-04T18:02:12.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "pending Users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/pending",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"pending"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthenticated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/index",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"index"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:15:53 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/pending",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"pending"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:27:09 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"count\": 1,\n    \"users\": [\n        {\n            \"id\": 8,\n            \"role_id\": 1,\n            \"first_name\": \"Dayne\",\n            \"last_name\": \"Rowe\",\n            \"phone\": \"941-794-2836\",\n            \"birth_date\": \"2015-01-29\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"pending \",\n            \"created_at\": \"2025-12-04T17:47:54.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:54.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "rejected Users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/rejected",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"rejected"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthenticated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/index",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"index"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:15:53 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/rejected",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"rejected"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:33:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"count\": 2,\n    \"users\": [\n        {\n            \"id\": 2,\n            \"role_id\": 1,\n            \"first_name\": \"Ansley\",\n            \"last_name\": \"Glover\",\n            \"phone\": \"(743) 895-7736\",\n            \"birth_date\": \"1991-05-31\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"rejected\",\n            \"created_at\": \"2025-12-04T17:47:54.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:54.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"role_id\": 1,\n            \"first_name\": \"Benton\",\n            \"last_name\": \"Littel\",\n            \"phone\": \"986.592.3748\",\n            \"birth_date\": \"2003-09-30\",\n            \"profile_image\": \"default.png\",\n            \"id_image\": \"default.png\",\n            \"gender\": \"male\",\n            \"status\": \"rejected\",\n            \"created_at\": \"2025-12-04T17:47:54.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:54.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "approve/{id}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/approve/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"approve",
+										"5"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthenticated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/index",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"index"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:15:53 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+								},
+								{
+									"name": "found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/approve/{id}",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"approve",
+												"{id}"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:36:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": false,\n    \"message\": \"User not found\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/approve/5",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"approve",
+												"5"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:37:36 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"User approved successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "reject/{id}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/reject/6",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"reject",
+										"6"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Unauthenticated",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/index",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"index"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:15:53 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+								},
+								{
+									"name": "found",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/approve/{id}",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"approve",
+												"{id}"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:36:50 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": false,\n    \"message\": \"User not found\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/reject/3",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"reject",
+												"3"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:38:46 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"User rejected successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete User/{id}",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/delete/5",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"delete",
+										"5"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/delete/5",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"delete",
+												"5"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:41:52 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"User deleted successfully\"\n}"
+								},
+								{
+									"name": "found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/admin/delete/5",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"admin",
+												"delete",
+												"5"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 10:42:22 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": false,\n    \"message\": \"User not found\"\n}"
+								}
+							]
+						},
+						{
+							"name": "users/{id}/apartments",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/users/10/apartments",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"10",
+										"apartments"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/users/{id}/apartments",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"users",
+												"{id}",
+												"apartments"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 17:31:13 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": false,\n    \"message\": \"User not found\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/users/10/apartments",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"users",
+												"10",
+												"apartments"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 17:32:06 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"User apartments fetched successfully\",\n    \"apartments\": [\n        {\n            \"id\": 11,\n            \"owner_id\": 10,\n            \"title\": \"Facere sit et blanditiis.\",\n            \"description\": \"Tempora voluptatem enim quidem ut. Dolores sit laudantium dolorem nobis voluptatem. Placeat cupiditate iusto in. Voluptatem libero aut quae esse.\",\n            \"city\": \"North Brycenburgh\",\n            \"address\": \"394 Kian Terrace Suite 220\\nCasperville, PA 70294-6606\",\n            \"price_per_day\": \"39.93\",\n            \"rooms\": 2,\n            \"bathrooms\": 1,\n            \"area\": \"149.89\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"owner_id\": 10,\n            \"title\": \"Rerum ex.\",\n            \"description\": \"Voluptatem dicta nobis deleniti aut dolorem molestiae quidem iste. Sunt at quas et assumenda similique. Id ipsa molestiae sint in et harum.\",\n            \"city\": \"Lake Gerdamouth\",\n            \"address\": \"886 Wolff Street Apt. 883\\nLucasport, PA 29153-0093\",\n            \"price_per_day\": \"163.89\",\n            \"rooms\": 4,\n            \"bathrooms\": 1,\n            \"area\": \"107.69\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n        },\n        {\n            \"id\": 19,\n            \"owner_id\": 10,\n            \"title\": \"Quod cumque ea doloribus aut.\",\n            \"description\": \"Iusto cum voluptatem dolorem quia consequuntur autem quo. Quia et laborum nesciunt dolores. Qui rerum accusamus aperiam nesciunt in est. Omnis distinctio consequatur ratione odit consectetur.\",\n            \"city\": \"East Richmond\",\n            \"address\": \"6544 Chelsey Port\\nElliebury, NV 62289\",\n            \"price_per_day\": \"67.04\",\n            \"rooms\": 4,\n            \"bathrooms\": 2,\n            \"area\": \"247.16\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "users/{id}/bookings",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NTgyMzk5LCJleHAiOjE3NjY1ODU5OTksIm5iZiI6MTc2NjU4MjM5OSwianRpIjoiMXhiWlpnWEdSNzFQUFUzdCIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.jgaZ2RrM1NT2oCAs26xpNtrXRx6ql96OJuYldhSG1Rk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/admin/users/12/bookings",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"admin",
+										"users",
+										"12",
+										"bookings"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/users/{id}/apartments",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"users",
+												"{id}",
+												"apartments"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 17:31:13 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": false,\n    \"message\": \"User not found\"\n}"
+								},
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "http://127.0.0.1:8000/api/users/12/bookings",
+											"protocol": "http",
+											"host": [
+												"127",
+												"0",
+												"0",
+												"1"
+											],
+											"port": "8000",
+											"path": [
+												"api",
+												"users",
+												"12",
+												"bookings"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": null,
+									"header": [
+										{
+											"key": "Host",
+											"value": "127.0.0.1:8000"
+										},
+										{
+											"key": "Connection",
+											"value": "close"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.2.12"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Fri, 05 Dec 2025 17:35:47 GMT"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"status\": true,\n    \"message\": \"User bookings fetched successfully\",\n    \"bookings\": [\n        {\n            \"id\": 1,\n            \"client_id\": 12,\n            \"start_date\": \"2025-07-21\",\n            \"end_date\": \"2025-09-25\",\n            \"total_price\": \"10313.16\",\n            \"status\": \"confirmed\",\n            \"owner_approval\": \"pending\",\n            \"created_at\": \"2025-12-05T08:27:13.000000Z\",\n            \"updated_at\": \"2025-12-05T10:59:36.000000Z\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

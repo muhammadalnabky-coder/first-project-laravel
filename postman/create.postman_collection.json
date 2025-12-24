@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "38f188c2-0bc9-425b-b38b-b44eef2fd9ba",
+		"name": "create",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49020727"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "first_name",
+							"value": "name",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": " last name",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+96399976454",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "id_image",
+							"type": "file",
+							"src": "postman-cloud:///1f0d1f27-2e31-41a0-9f29-e4ef384211ff"
+						},
+						{
+							"key": "profile_image",
+							"type": "file",
+							"src": "postman-cloud:///1f0d1e71-59e1-4ea0-82b5-46b01c6a0745"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "birth_date",
+							"value": "2012-09-11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "name",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": " last name",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+96399976454",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "id_image",
+									"type": "file",
+									"src": "postman-cloud:///1f0d1f27-2e31-41a0-9f29-e4ef384211ff"
+								},
+								{
+									"key": "profile_image",
+									"type": "file",
+									"src": "postman-cloud:///1f0d1e71-59e1-4ea0-82b5-46b01c6a0745"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "birth_date",
+									"value": "2012-09-11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 13:08:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"User registered successfully\",\n    \"user\": {\n        \"first_name\": \"name\",\n        \"last_name\": \"last name\",\n        \"birth_date\": \"2012-09-11\",\n        \"profile_image\": \"http://127.0.0.1:8000/uploads/users/1766581679_profile_694be5aff225d.jpg\",\n        \"id_image\": \"http://127.0.0.1:8000/uploads/users/1766581680_id_694be5b000def.png\",\n        \"gender\": \"male\",\n        \"phone\": \"+96399976454\",\n        \"role_id\": 1,\n        \"updated_at\": \"2025-12-24T13:08:00.000000Z\",\n        \"created_at\": \"2025-12-24T13:08:00.000000Z\",\n        \"id\": 12\n    },\n    \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNzY2NTgxNjgwLCJleHAiOjE3NjY1ODUyODAsIm5iZiI6MTc2NjU4MTY4MCwianRpIjoiaVdGSk1zN3dFNFVUUFg4ayIsInN1YiI6IjEyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.w2qTZvClc2MLN_XA6IphH7aecM9DrDtD1qtnxpT7pz0\"\n}"
+				}
+			]
+		}
+	]
+}
