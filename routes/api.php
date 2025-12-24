@@ -7,6 +7,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\OwnerController;
 use App\Http\Controllers\RatingController;
 use App\Http\Controllers\RoleController;
 use Illuminate\Http\Request;
@@ -26,6 +27,16 @@ Route::group(['middleware' => ['auth:api', 'checkApproved']], function() {
     Route::get('me', [AuthController::class, 'me']);
     Route::post('logout', [AuthController::class, 'logout']);
     Route::post('UserImages/{id}', [AuthController::class, 'updateProfile']);
+
+Route::prefix('owner')->group(function () {
+    Route::get('/index', [OwnerController::class, 'index']);
+    Route::get('/pending', [OwnerController::class, 'pendingUsers']);
+    Route::get('/approved', [OwnerController::class, 'approvedUsers']);
+    Route::get('/rejected', [OwnerController::class, 'rejectedUsers']);
+    Route::post('/approve/{id}', [OwnerController::class, 'approveUser']);
+    Route::post('/reject/{id}', [OwnerController::class, 'rejectUser']);
+    Route::delete('/delete/{id}', [OwnerController::class, 'deleteUser']);
+});
 
     //favorites
     Route::prefix('favorites')->group(function () {
@@ -70,7 +81,7 @@ Route::group(['middleware' => ['auth:api', 'checkApproved']], function() {
 
     //booking
     Route::prefix('booking')->group(function () {
-        Route::get('/', [BookingController::class, 'indexForUser']);
+        Route::post('/', [BookingController::class, 'indexForUser']);
         Route::get('/{id}', [BookingController::class, 'bookingDetails']);
         Route::post('update/{id}', [BookingChangeController::class, 'updateBooking']);
         Route::post('/create', [BookingController::class, 'createBooking']);

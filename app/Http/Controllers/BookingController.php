@@ -143,6 +143,10 @@ class BookingController extends Controller
             $query->where('status', $req->status);
         }
 
+         if ($req->owner_approval) {
+             $query->where('owner_approval', $req->owner_approval);
+         }
+
         return response()->json(['bookings' => $query->get()]);
     }
 
