@@ -23,7 +23,8 @@ class storeApartmentRequest extends FormRequest
             'rooms' => 'required|integer',
             'bathrooms' => 'required|integer',
             'area' => 'required|numeric',
-            'images.*' => 'image|mimes:jpg,png,jpeg|max:2048'
+            'image_url.*'   => 'nullable',
+            'image_url.*' => 'image|mimes:jpg,png,jpeg|max:2048'
         ];
     }
 }

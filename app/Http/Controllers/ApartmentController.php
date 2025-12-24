@@ -53,19 +53,31 @@ class ApartmentController extends Controller
     {
         $data = $req->validated();
         $data['owner_id']= auth()->id();
+
         $apartment = Apartment::create($data);
 
-        if ($req->hasFile('images')) {
-            foreach ($req->file('images') as $img) {
-                $name = time().'_'.uniqid().'.'.$img->getClientOriginalExtension();
-                $img->move(public_path('uploads/apartments'), $name);
-
-                ApartmentImage::create([
-                    'apartment_id' => $apartment->id,
-                    'image' => $name
-                ]);
-            }
+        if (!$req->hasFile('image_url')) {
+            return response()->json(['message' => 'No images uploaded'], 400);
         }
+
+        $files = $req->file('image_url');
+
+        if (!is_array($files)) {
+            $files = [$files];
+        }
+
+        foreach ($files as $img) {
+
+            $imageName = time() . '_' . uniqid() . '.' . $img->getClientOriginalExtension();
+            $img->move(public_path('uploads/apartments'), $imageName);
+
+            ApartmentImage::create([
+                'apartment_id' => $apartment->id,
+                'image_url'    => asset('uploads/apartments/' .$imageName)
+            ]);
+        }
+
+
         return response()->json([
             'message' => 'Apartment created successfully',
             'apartment' => $apartment->load('images')
