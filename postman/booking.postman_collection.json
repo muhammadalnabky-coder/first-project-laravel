@@ -1,0 +1,967 @@
+{
+	"info": {
+		"_postman_id": "9a14d967-1b0d-4928-b11b-172a409f53cf",
+		"name": "booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49020727"
+	},
+	"item": [
+		{
+			"name": "show{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY0OTIzODc1LCJleHAiOjE3NjQ5Mjc0NzUsIm5iZiI6MTc2NDkyMzg3NSwianRpIjoiTk1SbGRqeGNFMWRSSExMUCIsInN1YiI6IjEyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.8Ihs8pRHqEiS3_MrWoc5enzDJkeaBTdfDktM3aY-aSw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "show",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 19:09:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"client_id\": 1,\n    \"start_date\": \"2023-12-12\",\n    \"end_date\": \"2024-12-12\",\n    \"total_price\": \"28203.96\",\n    \"status\": \"confirmed\",\n    \"owner_approval\": \"pending\",\n    \"created_at\": \"2025-12-24T03:05:57.000000Z\",\n    \"updated_at\": \"2025-12-24T13:22:17.000000Z\",\n    \"client\": {\n        \"id\": 1,\n        \"role_id\": 2,\n        \"first_name\": \"muhammad\",\n        \"last_name\": \"alnabky\",\n        \"phone\": \"0999999999\",\n        \"birth_date\": \"1996-02-11\",\n        \"profile_image\": \"default.png\",\n        \"id_image\": \"default.png\",\n        \"gender\": \"male\",\n        \"status\": \"approved\",\n        \"created_at\": \"2025-12-24T02:30:58.000000Z\",\n        \"updated_at\": \"2025-12-24T02:30:58.000000Z\"\n    },\n    \"changes\": [\n        {\n            \"id\": 2,\n            \"booking_id\": 1,\n            \"changed_by\": \"admin\",\n            \"old_status\": \"pending\",\n            \"new_status\": \"confirmed\",\n            \"notes\": null,\n            \"created_at\": \"2025-12-24T13:22:17.000000Z\",\n            \"updated_at\": \"2025-12-24T13:22:17.000000Z\"\n        }\n    ],\n    \"change_reservation\": {\n        \"id\": 1,\n        \"change_id\": 2,\n        \"booking_id\": 1,\n        \"owner_id\": 2,\n        \"apartment_id\": 3,\n        \"created_at\": \"2025-12-24T03:05:57.000000Z\",\n        \"updated_at\": \"2025-12-24T13:22:17.000000Z\",\n        \"apartment\": {\n            \"id\": 3,\n            \"owner_id\": 2,\n            \"title\": \"Iure beatae est.\",\n            \"description\": \"Eum aspernatur aspernatur voluptatem unde repellat. Nulla debitis minima reprehenderit pariatur modi. Ea facilis saepe aut magni.\",\n            \"city\": \"Braedenton\",\n            \"Governorate\": \"Sao Tome and Principe\",\n            \"address\": \"1596 Cornell Road\\nLynchstad, HI 10898-4760\",\n            \"price_per_day\": \"77.06\",\n            \"rooms\": 1,\n            \"bathrooms\": 3,\n            \"area\": \"126.05\",\n            \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n            \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "index For me",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{22}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 08:39:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"client_id\": 12,\n    \"start_date\": \"2025-11-21\",\n    \"end_date\": \"2025-12-25\",\n    \"total_price\": \"5312.84\",\n    \"status\": \"pending\",\n    \"owner_approval\": \"pending\",\n    \"created_at\": \"2025-12-05T08:27:13.000000Z\",\n    \"updated_at\": \"2025-12-05T08:33:56.000000Z\",\n    \"client\": {\n        \"id\": 12,\n        \"role_id\": 1,\n        \"first_name\": \"muhammad\",\n        \"last_name\": \"alnabky\",\n        \"phone\": \"963993168005\",\n        \"birth_date\": \"1999-01-10\",\n        \"profile_image\": \"ttttttttttttttttttttttttttttttttttttttt\",\n        \"id_image\": \"eeeeeeeeeeeeeeeeeeeeeeeeeeeee\",\n        \"gender\": \"male\",\n        \"status\": \"approved\",\n        \"created_at\": \"2025-12-04T18:02:12.000000Z\",\n        \"updated_at\": \"2025-12-04T18:02:12.000000Z\"\n    },\n    \"changes\": [\n        {\n            \"id\": 1,\n            \"booking_id\": 1,\n            \"changed_by\": \"owner\",\n            \"old_status\": \"{\\\"apartment_id\\\":4,\\\"start_date\\\":\\\"2025-11-27\\\",\\\"end_date\\\":\\\"2025-12-27\\\",\\\"total_price\\\":\\\"3592.80\\\"}\",\n            \"new_status\": \"{\\\"apartment_id\\\":\\\"10\\\",\\\"start_date\\\":\\\"2025-11-27\\\",\\\"end_date\\\":\\\"2025-12-27\\\",\\\"total_price\\\":4687.799999999999}\",\n            \"notes\": \"Booking updated.\",\n            \"created_at\": \"2025-12-05T08:33:32.000000Z\",\n            \"updated_at\": \"2025-12-05T08:33:32.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"booking_id\": 1,\n            \"changed_by\": \"owner\",\n            \"old_status\": \"{\\\"apartment_id\\\":10,\\\"start_date\\\":\\\"2025-11-27\\\",\\\"end_date\\\":\\\"2025-12-27\\\",\\\"total_price\\\":\\\"4687.80\\\"}\",\n            \"new_status\": \"{\\\"apartment_id\\\":\\\"10\\\",\\\"start_date\\\":\\\"2025-11-21\\\",\\\"end_date\\\":\\\"2025-12-25\\\",\\\"total_price\\\":5312.84}\",\n            \"notes\": \"Booking updated.\",\n            \"created_at\": \"2025-12-05T08:33:56.000000Z\",\n            \"updated_at\": \"2025-12-05T08:33:56.000000Z\"\n        }\n    ],\n    \"change_reservation\": {\n        \"id\": 1,\n        \"change_id\": null,\n        \"booking_id\": 1,\n        \"owner_id\": 6,\n        \"apartment_id\": 10,\n        \"created_at\": \"2025-12-05T08:27:13.000000Z\",\n        \"updated_at\": \"2025-12-05T08:33:32.000000Z\",\n        \"apartment\": {\n            \"id\": 10,\n            \"owner_id\": 7,\n            \"title\": \"Veniam optio cupiditate.\",\n            \"description\": \"In eveniet exercitationem temporibus qui dolorem. Maiores sit officia aspernatur similique. Est nobis est distinctio dolor ea exercitationem velit. Ut et repellat corrupti magni veritatis deleniti error.\",\n            \"city\": \"South Ubaldo\",\n            \"address\": \"74098 Lilyan Rapids Apt. 960\\nNew Clementine, LA 44611\",\n            \"price_per_day\": \"156.26\",\n            \"rooms\": 2,\n            \"bathrooms\": 2,\n            \"area\": \"173.78\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY0OTIwMDgxLCJleHAiOjE3NjQ5MjM2ODEsIm5iZiI6MTc2NDkyMDA4MSwianRpIjoiZUhSazRzNlNCWDNCeDBnMiIsInN1YiI6IjEyIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.7307zE8UksOxySBN-7XxK6YMrr7Cm-9kO0mVfQor1SI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/create?apartment_id=4&start_date=2025-11-27&end_date=2025-12-27",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"create"
+					],
+					"query": [
+						{
+							"key": "apartment_id",
+							"value": "4"
+						},
+						{
+							"key": "start_date",
+							"value": "2025-11-27"
+						},
+						{
+							"key": "end_date",
+							"value": "2025-12-27"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/create?apartment_id=4&start_date=2025-11-27&end_date=2025-12-27",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"create"
+							],
+							"query": [
+								{
+									"key": "apartment_id",
+									"value": "4"
+								},
+								{
+									"key": "start_date",
+									"value": "2025-11-27"
+								},
+								{
+									"key": "end_date",
+									"value": "2025-12-27"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 08:27:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Booking created successfully\",\n    \"booking\": {\n        \"client_id\": 12,\n        \"start_date\": \"2025-11-27\",\n        \"end_date\": \"2025-12-27\",\n        \"total_price\": 3592.8,\n        \"status\": \"pending\",\n        \"owner_approval\": \"pending\",\n        \"updated_at\": \"2025-12-05T08:27:13.000000Z\",\n        \"created_at\": \"2025-12-05T08:27:13.000000Z\",\n        \"id\": 1\n    }\n}"
+				},
+				{
+					"name": "already booked",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/create?apartment_id=4&start_date=2025-11-27&end_date=2025-12-27",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"create"
+							],
+							"query": [
+								{
+									"key": "apartment_id",
+									"value": "4"
+								},
+								{
+									"key": "start_date",
+									"value": "2025-11-27"
+								},
+								{
+									"key": "end_date",
+									"value": "2025-12-27"
+								}
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 08:28:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": false,\n    \"message\": \"This apartment is already booked for the selected dates.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "update/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{22}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/update/3?apartment_id=4&start_date=2025-11-29&end_date=2025-12-24",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"update",
+						"3"
+					],
+					"query": [
+						{
+							"key": "apartment_id",
+							"value": "4"
+						},
+						{
+							"key": "start_date",
+							"value": "2025-11-29"
+						},
+						{
+							"key": "end_date",
+							"value": "2025-12-24"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Unauthenticated",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/update/3?apartment_id=4&start_date=2025-11-29&end_date=2025-12-24",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"update",
+								"3"
+							],
+							"query": [
+								{
+									"key": "apartment_id",
+									"value": "4"
+								},
+								{
+									"key": "start_date",
+									"value": "2025-11-29"
+								},
+								{
+									"key": "end_date",
+									"value": "2025-12-24"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 19:27:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+				},
+				{
+					"name": "owner",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/update/3?apartment_id=4&start_date=2025-11-29&end_date=2025-12-24",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"update",
+								"3"
+							],
+							"query": [
+								{
+									"key": "apartment_id",
+									"value": "4"
+								},
+								{
+									"key": "start_date",
+									"value": "2025-11-29"
+								},
+								{
+									"key": "end_date",
+									"value": "2025-12-24"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 19:30:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The user is not the owner of the booking.\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/update/7?apartment_id=4&start_date=2025-11-29&end_date=2025-12-24",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"update",
+								"7"
+							],
+							"query": [
+								{
+									"key": "apartment_id",
+									"value": "4"
+								},
+								{
+									"key": "start_date",
+									"value": "2025-11-29"
+								},
+								{
+									"key": "end_date",
+									"value": "2025-12-24"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 19:31:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Booking updated successfully\",\n    \"booking\": [\n        {\n            \"id\": 1,\n            \"booking_id\": 3,\n            \"changed_by\": \"admin\",\n            \"old_status\": \"pending\",\n            \"new_status\": \"confirmed\",\n            \"notes\": null,\n            \"created_at\": \"2025-12-24T03:19:36.000000Z\",\n            \"updated_at\": \"2025-12-24T03:19:36.000000Z\",\n            \"booking\": {\n                \"id\": 3,\n                \"client_id\": 1,\n                \"start_date\": \"2011-12-12\",\n                \"end_date\": \"2012-12-12\",\n                \"total_price\": \"28203.96\",\n                \"status\": \"confirmed\",\n                \"owner_approval\": \"pending\",\n                \"created_at\": \"2025-12-24T03:06:25.000000Z\",\n                \"updated_at\": \"2025-12-24T03:19:36.000000Z\"\n            },\n            \"change_reservation\": {\n                \"id\": 3,\n                \"change_id\": 1,\n                \"booking_id\": 3,\n                \"owner_id\": 2,\n                \"apartment_id\": 3,\n                \"created_at\": \"2025-12-24T03:06:25.000000Z\",\n                \"updated_at\": \"2025-12-24T03:19:36.000000Z\"\n            }\n        },\n        {\n            \"id\": 2,\n            \"booking_id\": 1,\n            \"changed_by\": \"admin\",\n            \"old_status\": \"pending\",\n            \"new_status\": \"confirmed\",\n            \"notes\": null,\n            \"created_at\": \"2025-12-24T13:22:17.000000Z\",\n            \"updated_at\": \"2025-12-24T13:22:17.000000Z\",\n            \"booking\": {\n                \"id\": 1,\n                \"client_id\": 1,\n                \"start_date\": \"2023-12-12\",\n                \"end_date\": \"2024-12-12\",\n                \"total_price\": \"28203.96\",\n                \"status\": \"confirmed\",\n                \"owner_approval\": \"pending\",\n                \"created_at\": \"2025-12-24T03:05:57.000000Z\",\n                \"updated_at\": \"2025-12-24T13:22:17.000000Z\"\n            },\n            \"change_reservation\": {\n                \"id\": 1,\n                \"change_id\": 2,\n                \"booking_id\": 1,\n                \"owner_id\": 2,\n                \"apartment_id\": 3,\n                \"created_at\": \"2025-12-24T03:05:57.000000Z\",\n                \"updated_at\": \"2025-12-24T13:22:17.000000Z\"\n            }\n        },\n        {\n            \"id\": 3,\n            \"booking_id\": 7,\n            \"changed_by\": \"owner\",\n            \"old_status\": \"pending\",\n            \"new_status\": \"cancelled\",\n            \"notes\": null,\n            \"created_at\": \"2025-12-24T19:25:30.000000Z\",\n            \"updated_at\": \"2025-12-24T19:25:30.000000Z\",\n            \"booking\": {\n                \"id\": 7,\n                \"client_id\": 13,\n                \"start_date\": \"2025-11-29\",\n                \"end_date\": \"2025-12-24\",\n                \"total_price\": \"1943.25\",\n                \"status\": \"cancelled\",\n                \"owner_approval\": \"pending\",\n                \"created_at\": \"2025-12-24T19:17:14.000000Z\",\n                \"updated_at\": \"2025-12-24T19:31:12.000000Z\"\n            },\n            \"change_reservation\": {\n                \"id\": 7,\n                \"change_id\": 3,\n                \"booking_id\": 7,\n                \"owner_id\": 1,\n                \"apartment_id\": 4,\n                \"created_at\": \"2025-12-24T19:17:14.000000Z\",\n                \"updated_at\": \"2025-12-24T19:31:12.000000Z\"\n            }\n        },\n        {\n            \"id\": 4,\n            \"booking_id\": 7,\n            \"changed_by\": \"owner\",\n            \"old_status\": \"{\\\"apartment_id\\\":5,\\\"start_date\\\":\\\"2025-11-27\\\",\\\"end_date\\\":\\\"2025-12-27\\\",\\\"total_price\\\":\\\"3440.10\\\"}\",\n            \"new_status\": \"{\\\"apartment_id\\\":\\\"4\\\",\\\"start_date\\\":\\\"2025-11-29\\\",\\\"end_date\\\":\\\"2025-12-24\\\",\\\"total_price\\\":1943.25}\",\n            \"notes\": \"Booking updated.\",\n            \"created_at\": \"2025-12-24T19:31:12.000000Z\",\n            \"updated_at\": \"2025-12-24T19:31:12.000000Z\",\n            \"booking\": {\n                \"id\": 7,\n                \"client_id\": 13,\n                \"start_date\": \"2025-11-29\",\n                \"end_date\": \"2025-12-24\",\n                \"total_price\": \"1943.25\",\n                \"status\": \"cancelled\",\n                \"owner_approval\": \"pending\",\n                \"created_at\": \"2025-12-24T19:17:14.000000Z\",\n                \"updated_at\": \"2025-12-24T19:31:12.000000Z\"\n            },\n            \"change_reservation\": {\n                \"id\": 9,\n                \"change_id\": 4,\n                \"booking_id\": 7,\n                \"owner_id\": 2,\n                \"apartment_id\": 4,\n                \"created_at\": \"2025-12-24T19:31:12.000000Z\",\n                \"updated_at\": \"2025-12-24T19:31:12.000000Z\"\n            }\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "cancel",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{22}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/booking/cancel/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"booking",
+						"cancel",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "owner",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/cancel/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"cancel",
+								"1"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 08:46:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The user is not the owner of the booking.\"\n}"
+				},
+				{
+					"name": "found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/cancel/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"cancel",
+								"2"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 08:55:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Booking not found\"\n}"
+				},
+				{
+					"name": "ssuccess",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/booking/cancel/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"booking",
+								"cancel",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 09:01:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Status updated successfully\",\n    \"booking\": {\n        \"id\": 1,\n        \"client_id\": 12,\n        \"start_date\": \"2025-11-21\",\n        \"end_date\": \"2025-12-25\",\n        \"total_price\": \"5312.84\",\n        \"status\": \"cancelled\",\n        \"owner_approval\": \"pending\",\n        \"created_at\": \"2025-12-05T08:27:13.000000Z\",\n        \"updated_at\": \"2025-12-05T09:01:20.000000Z\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "22",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

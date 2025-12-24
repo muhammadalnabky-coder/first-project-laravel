@@ -1,0 +1,2612 @@
+{
+	"info": {
+		"_postman_id": "d14ff0f4-a7ca-4bc2-8c28-0b47bcba28cb",
+		"name": "apartments",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49020727"
+	},
+	"item": [
+		{
+			"name": "index",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNzY2NjAwNzU0LCJleHAiOjE3NjY2MDQzNTQsIm5iZiI6MTc2NjYwMDc1NCwianRpIjoiMGpvdlNuRHpSOVZNUnpmOCIsInN1YiI6IjEzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Gg0FfAgHUmJQIoDkiCH1lMByXLfrnezsPzi72mvj788",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"me"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "muhammad2",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "muhammad009002@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Nov 2025 04:03:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Account is not approved by admin\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments"
+							],
+							"query": [
+								{
+									"key": "booking_id",
+									"value": "3",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Dec 2025 19:34:06 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"count\": 20,\n    \"apartments\": [\n        {\n            \"id\": 1,\n            \"owner_id\": 5,\n            \"title\": \"Aut quod qui.\",\n            \"description\": \"Natus provident quia laborum aliquam aut officia vel et. Dolore sit fugiat dicta magni nobis omnis. Laborum hic consequatur iure culpa voluptatem sint.\",\n            \"city\": \"North Erikville\",\n            \"address\": \"3481 Treutel Glens Suite 596\\nEast Davon, CT 65403-6417\",\n            \"price_per_day\": \"167.22\",\n            \"rooms\": 4,\n            \"bathrooms\": 1,\n            \"area\": \"193.90\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 1,\n                    \"apartment_id\": 1,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ccee?text=Apartment+dolor\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 2,\n                    \"apartment_id\": 1,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0077ff?text=Apartment+delectus\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 3,\n                    \"apartment_id\": 1,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00aaaa?text=Apartment+ducimus\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"owner_id\": 10,\n            \"title\": \"Eveniet et at.\",\n            \"description\": \"Illo et est non sequi. Reiciendis deleniti veritatis molestiae ut molestiae esse. Alias numquam officia numquam dignissimos. Facere minima quod perferendis voluptatum.\",\n            \"city\": \"Osbaldochester\",\n            \"address\": \"91547 Malvina Haven\\nSouth Colin, VT 24574\",\n            \"price_per_day\": \"127.61\",\n            \"rooms\": 1,\n            \"bathrooms\": 1,\n            \"area\": \"151.74\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 4,\n                    \"apartment_id\": 2,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0077dd?text=Apartment+odio\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 5,\n                    \"apartment_id\": 2,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/008888?text=Apartment+fugit\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 6,\n                    \"apartment_id\": 2,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ccff?text=Apartment+sit\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"owner_id\": 9,\n            \"title\": \"Sunt maxime architecto fugiat.\",\n            \"description\": \"Voluptatibus laborum placeat culpa nisi eveniet rerum eum. Omnis est magnam blanditiis dolor dolor sed. Molestias sint doloremque et molestiae fugit eum.\",\n            \"city\": \"Port Yvetteshire\",\n            \"address\": \"8676 Ramona Trail\\nLake Arleneberg, DC 21706\",\n            \"price_per_day\": \"27.63\",\n            \"rooms\": 1,\n            \"bathrooms\": 3,\n            \"area\": \"105.53\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 7,\n                    \"apartment_id\": 3,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00dd11?text=Apartment+est\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 8,\n                    \"apartment_id\": 3,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0000dd?text=Apartment+veniam\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 9,\n                    \"apartment_id\": 3,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00aa33?text=Apartment+sequi\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"owner_id\": 6,\n            \"title\": \"Eveniet voluptates.\",\n            \"description\": \"Atque quibusdam quasi commodi rerum ex delectus id. Sed hic assumenda nulla ipsum eum labore. Libero reiciendis repellat debitis nihil temporibus.\",\n            \"city\": \"Alexysview\",\n            \"address\": \"1969 Satterfield Skyway\\nLake Charley, DC 30939\",\n            \"price_per_day\": \"119.76\",\n            \"rooms\": 1,\n            \"bathrooms\": 3,\n            \"area\": \"183.75\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 10,\n                    \"apartment_id\": 4,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00dd00?text=Apartment+sed\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 11,\n                    \"apartment_id\": 4,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0044cc?text=Apartment+quos\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 12,\n                    \"apartment_id\": 4,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/000099?text=Apartment+unde\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"owner_id\": 1,\n            \"title\": \"Quia debitis.\",\n            \"description\": \"Facere architecto inventore sint culpa iste est. Laborum sed sint commodi consequuntur. Et sunt dicta nostrum dolore.\",\n            \"city\": \"North Oliverview\",\n            \"address\": \"7865 Homenick Squares\\nLemkestad, WA 09686\",\n            \"price_per_day\": \"99.78\",\n            \"rooms\": 3,\n            \"bathrooms\": 1,\n            \"area\": \"116.00\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 13,\n                    \"apartment_id\": 5,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00eecc?text=Apartment+quod\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 14,\n                    \"apartment_id\": 5,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/000000?text=Apartment+et\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 15,\n                    \"apartment_id\": 5,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ff66?text=Apartment+maiores\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"owner_id\": 9,\n            \"title\": \"Neque asperiores incidunt.\",\n            \"description\": \"Et ipsa rem enim cupiditate tempore rerum tempore. Cupiditate aut officia excepturi est ad eveniet. Aut ipsum a aut quae autem voluptas delectus. Accusantium et architecto ratione deserunt consequatur beatae laborum. Et fuga impedit ut amet.\",\n            \"city\": \"Gretchenside\",\n            \"address\": \"1612 Dare Ramp\\nAliceville, GA 71486\",\n            \"price_per_day\": \"196.60\",\n            \"rooms\": 1,\n            \"bathrooms\": 3,\n            \"area\": \"54.42\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 16,\n                    \"apartment_id\": 6,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0077aa?text=Apartment+autem\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 17,\n                    \"apartment_id\": 6,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/005533?text=Apartment+expedita\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 18,\n                    \"apartment_id\": 6,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0088aa?text=Apartment+tempore\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 7,\n            \"owner_id\": 8,\n            \"title\": \"Adipisci qui eligendi.\",\n            \"description\": \"Nesciunt harum enim at quisquam debitis nostrum voluptas iste. Ut culpa dolorem et fuga voluptatum incidunt distinctio. Et perspiciatis quia praesentium omnis non dolores qui. Maiores deserunt numquam eaque velit temporibus nihil sit.\",\n            \"city\": \"Port Christopheville\",\n            \"address\": \"2347 Monahan Coves Suite 254\\nClydestad, NJ 27108-9921\",\n            \"price_per_day\": \"115.00\",\n            \"rooms\": 5,\n            \"bathrooms\": 3,\n            \"area\": \"192.98\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 19,\n                    \"apartment_id\": 7,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/001144?text=Apartment+fuga\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 20,\n                    \"apartment_id\": 7,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00eebb?text=Apartment+officia\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 21,\n                    \"apartment_id\": 7,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ff66?text=Apartment+iusto\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 8,\n            \"owner_id\": 2,\n            \"title\": \"Ducimus iure modi qui.\",\n            \"description\": \"Excepturi dolores consectetur esse mollitia dignissimos. Ea quos accusantium id quidem. Autem non iusto consectetur fuga beatae consequatur aut nostrum. Libero temporibus placeat omnis nam quis adipisci repudiandae.\",\n            \"city\": \"East Jennyfer\",\n            \"address\": \"32564 Leila Turnpike Apt. 606\\nKautzerborough, LA 48970-6110\",\n            \"price_per_day\": \"41.81\",\n            \"rooms\": 3,\n            \"bathrooms\": 1,\n            \"area\": \"166.00\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 22,\n                    \"apartment_id\": 8,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0077aa?text=Apartment+sed\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 23,\n                    \"apartment_id\": 8,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/001133?text=Apartment+omnis\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 24,\n                    \"apartment_id\": 8,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/006655?text=Apartment+quas\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 9,\n            \"owner_id\": 9,\n            \"title\": \"Sunt et provident quia.\",\n            \"description\": \"Facere est consequatur maxime voluptas et. Nihil sint labore eligendi quo porro assumenda. Et nesciunt incidunt sed.\",\n            \"city\": \"New Nicolaville\",\n            \"address\": \"99839 Johnston Crossroad Suite 042\\nEast Markushaven, DE 71572\",\n            \"price_per_day\": \"186.78\",\n            \"rooms\": 4,\n            \"bathrooms\": 3,\n            \"area\": \"231.19\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 25,\n                    \"apartment_id\": 9,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ddaa?text=Apartment+quibusdam\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 26,\n                    \"apartment_id\": 9,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00eecc?text=Apartment+qui\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 27,\n                    \"apartment_id\": 9,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0088ee?text=Apartment+quis\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 10,\n            \"owner_id\": 7,\n            \"title\": \"Veniam optio cupiditate.\",\n            \"description\": \"In eveniet exercitationem temporibus qui dolorem. Maiores sit officia aspernatur similique. Est nobis est distinctio dolor ea exercitationem velit. Ut et repellat corrupti magni veritatis deleniti error.\",\n            \"city\": \"South Ubaldo\",\n            \"address\": \"74098 Lilyan Rapids Apt. 960\\nNew Clementine, LA 44611\",\n            \"price_per_day\": \"156.26\",\n            \"rooms\": 2,\n            \"bathrooms\": 2,\n            \"area\": \"173.78\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 28,\n                    \"apartment_id\": 10,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/009922?text=Apartment+fugiat\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 29,\n                    \"apartment_id\": 10,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/006655?text=Apartment+quaerat\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 30,\n                    \"apartment_id\": 10,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0099dd?text=Apartment+odit\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 11,\n            \"owner_id\": 10,\n            \"title\": \"Facere sit et blanditiis.\",\n            \"description\": \"Tempora voluptatem enim quidem ut. Dolores sit laudantium dolorem nobis voluptatem. Placeat cupiditate iusto in. Voluptatem libero aut quae esse.\",\n            \"city\": \"North Brycenburgh\",\n            \"address\": \"394 Kian Terrace Suite 220\\nCasperville, PA 70294-6606\",\n            \"price_per_day\": \"39.93\",\n            \"rooms\": 2,\n            \"bathrooms\": 1,\n            \"area\": \"149.89\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 31,\n                    \"apartment_id\": 11,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ee11?text=Apartment+exercitationem\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 32,\n                    \"apartment_id\": 11,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0066ff?text=Apartment+aut\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 33,\n                    \"apartment_id\": 11,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0099cc?text=Apartment+ut\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 12,\n            \"owner_id\": 7,\n            \"title\": \"Et illum voluptas illo.\",\n            \"description\": \"Sit et voluptates optio aperiam amet quia magni. Rerum quibusdam quaerat aut minus et. Sit sequi laborum qui magni mollitia. Incidunt accusantium et cumque quam est. Et natus minima sint laboriosam animi.\",\n            \"city\": \"East Charlotte\",\n            \"address\": \"9939 Cassin Grove\\nNorth Rosiemouth, OH 64504\",\n            \"price_per_day\": \"131.93\",\n            \"rooms\": 4,\n            \"bathrooms\": 3,\n            \"area\": \"216.96\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 34,\n                    \"apartment_id\": 12,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ffff?text=Apartment+ut\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 35,\n                    \"apartment_id\": 12,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ccff?text=Apartment+alias\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 36,\n                    \"apartment_id\": 12,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00cc66?text=Apartment+accusamus\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 13,\n            \"owner_id\": 6,\n            \"title\": \"Earum eos.\",\n            \"description\": \"Debitis deleniti laboriosam consequuntur. Blanditiis et deleniti possimus nihil dolor. Corrupti cumque laborum consequatur distinctio est harum esse. Quia perferendis ea rerum eligendi.\",\n            \"city\": \"O'Haraberg\",\n            \"address\": \"94171 Angus Junction Suite 262\\nKemmerfort, FL 71558-5117\",\n            \"price_per_day\": \"63.27\",\n            \"rooms\": 5,\n            \"bathrooms\": 2,\n            \"area\": \"132.03\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 37,\n                    \"apartment_id\": 13,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00dd77?text=Apartment+ut\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 38,\n                    \"apartment_id\": 13,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/003366?text=Apartment+labore\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 39,\n                    \"apartment_id\": 13,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/006655?text=Apartment+ratione\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 14,\n            \"owner_id\": 10,\n            \"title\": \"Rerum ex.\",\n            \"description\": \"Voluptatem dicta nobis deleniti aut dolorem molestiae quidem iste. Sunt at quas et assumenda similique. Id ipsa molestiae sint in et harum.\",\n            \"city\": \"Lake Gerdamouth\",\n            \"address\": \"886 Wolff Street Apt. 883\\nLucasport, PA 29153-0093\",\n            \"price_per_day\": \"163.89\",\n            \"rooms\": 4,\n            \"bathrooms\": 1,\n            \"area\": \"107.69\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 40,\n                    \"apartment_id\": 14,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ff11?text=Apartment+voluptas\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 41,\n                    \"apartment_id\": 14,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ee33?text=Apartment+quia\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 42,\n                    \"apartment_id\": 14,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00aa99?text=Apartment+sed\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 15,\n            \"owner_id\": 7,\n            \"title\": \"Omnis et perferendis.\",\n            \"description\": \"Occaecati molestiae non in. Pariatur alias vel perspiciatis. Ducimus quas minima ipsam eveniet.\",\n            \"city\": \"Josuemouth\",\n            \"address\": \"44583 Damien Corner\\nJenkinsside, OH 34855\",\n            \"price_per_day\": \"55.89\",\n            \"rooms\": 2,\n            \"bathrooms\": 2,\n            \"area\": \"238.60\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 43,\n                    \"apartment_id\": 15,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/003399?text=Apartment+corporis\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 44,\n                    \"apartment_id\": 15,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/003355?text=Apartment+eaque\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 45,\n                    \"apartment_id\": 15,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/006699?text=Apartment+perspiciatis\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 16,\n            \"owner_id\": 7,\n            \"title\": \"Praesentium consequatur consequuntur.\",\n            \"description\": \"Omnis asperiores cum deserunt perspiciatis eius. Id neque illo debitis adipisci occaecati suscipit rerum. Accusamus eveniet quidem est qui voluptate quaerat qui. Adipisci exercitationem est autem.\",\n            \"city\": \"New Mose\",\n            \"address\": \"895 O'Hara Expressway\\nWest Etha, MI 99790\",\n            \"price_per_day\": \"180.68\",\n            \"rooms\": 4,\n            \"bathrooms\": 2,\n            \"area\": \"54.66\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 46,\n                    \"apartment_id\": 16,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/000011?text=Apartment+numquam\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 47,\n                    \"apartment_id\": 16,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00aa88?text=Apartment+velit\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 48,\n                    \"apartment_id\": 16,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0099dd?text=Apartment+ut\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 17,\n            \"owner_id\": 5,\n            \"title\": \"Nemo possimus temporibus occaecati.\",\n            \"description\": \"Corporis libero officia quo aliquid deserunt. Soluta explicabo est velit molestias quae unde. Quia reiciendis sint numquam sint aut aut doloremque reiciendis.\",\n            \"city\": \"Weimannfort\",\n            \"address\": \"58120 Krystina Divide\\nDonnellyport, ND 21112\",\n            \"price_per_day\": \"37.57\",\n            \"rooms\": 1,\n            \"bathrooms\": 1,\n            \"area\": \"111.17\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 49,\n                    \"apartment_id\": 17,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/000077?text=Apartment+nam\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 50,\n                    \"apartment_id\": 17,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0044dd?text=Apartment+dolor\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 51,\n                    \"apartment_id\": 17,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/005500?text=Apartment+omnis\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 18,\n            \"owner_id\": 4,\n            \"title\": \"Odio autem.\",\n            \"description\": \"Sit eos soluta omnis esse dolore et. Qui consequatur magnam odio. Mollitia rerum expedita accusamus molestias consectetur sint aut at.\",\n            \"city\": \"VonRuedenborough\",\n            \"address\": \"86886 Ava Crossing Suite 958\\nBoylefort, FL 90433-8155\",\n            \"price_per_day\": \"175.52\",\n            \"rooms\": 2,\n            \"bathrooms\": 1,\n            \"area\": \"234.55\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 52,\n                    \"apartment_id\": 18,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/000044?text=Apartment+nisi\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 53,\n                    \"apartment_id\": 18,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0066cc?text=Apartment+nihil\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 54,\n                    \"apartment_id\": 18,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00dd11?text=Apartment+non\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 19,\n            \"owner_id\": 10,\n            \"title\": \"Quod cumque ea doloribus aut.\",\n            \"description\": \"Iusto cum voluptatem dolorem quia consequuntur autem quo. Quia et laborum nesciunt dolores. Qui rerum accusamus aperiam nesciunt in est. Omnis distinctio consequatur ratione odit consectetur.\",\n            \"city\": \"East Richmond\",\n            \"address\": \"6544 Chelsey Port\\nElliebury, NV 62289\",\n            \"price_per_day\": \"67.04\",\n            \"rooms\": 4,\n            \"bathrooms\": 2,\n            \"area\": \"247.16\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 55,\n                    \"apartment_id\": 19,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/006622?text=Apartment+consequatur\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 56,\n                    \"apartment_id\": 19,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/003311?text=Apartment+delectus\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 57,\n                    \"apartment_id\": 19,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0033dd?text=Apartment+quisquam\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 20,\n            \"owner_id\": 8,\n            \"title\": \"Voluptas molestias qui voluptate.\",\n            \"description\": \"Sapiente earum vel consequatur molestias est quo facilis. Hic deserunt perspiciatis est suscipit. Ut mollitia aut occaecati et. Animi saepe ratione voluptas commodi repellat est.\",\n            \"city\": \"Port Delphine\",\n            \"address\": \"43905 Mante Circle Apt. 729\\nNorth Troy, MT 05984-7396\",\n            \"price_per_day\": \"110.48\",\n            \"rooms\": 3,\n            \"bathrooms\": 2,\n            \"area\": \"163.90\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 58,\n                    \"apartment_id\": 20,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/008822?text=Apartment+quas\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 59,\n                    \"apartment_id\": 20,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00cc44?text=Apartment+modi\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 60,\n                    \"apartment_id\": 20,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ff00?text=Apartment+earum\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "show",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNzY2NjAwNzU0LCJleHAiOjE3NjY2MDQzNTQsIm5iZiI6MTc2NjYwMDc1NCwianRpIjoiMGpvdlNuRHpSOVZNUnpmOCIsInN1YiI6IjEzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Gg0FfAgHUmJQIoDkiCH1lMByXLfrnezsPzi72mvj788",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"me"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "muhammad2",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "muhammad009002@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Nov 2025 04:03:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Account is not approved by admin\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/3",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 18:31:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"apartment\": {\n        \"id\": 3,\n        \"owner_id\": 2,\n        \"title\": \"Iure beatae est.\",\n        \"description\": \"Eum aspernatur aspernatur voluptatem unde repellat. Nulla debitis minima reprehenderit pariatur modi. Ea facilis saepe aut magni.\",\n        \"city\": \"Braedenton\",\n        \"Governorate\": \"Sao Tome and Principe\",\n        \"address\": \"1596 Cornell Road\\nLynchstad, HI 10898-4760\",\n        \"price_per_day\": \"77.06\",\n        \"rooms\": 1,\n        \"bathrooms\": 3,\n        \"area\": \"126.05\",\n        \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n        \"updated_at\": \"2025-12-24T02:31:00.000000Z\",\n        \"images\": [\n            {\n                \"id\": 7,\n                \"apartment_id\": 3,\n                \"image_url\": \"https://via.placeholder.com/800x600.png/00aa99?text=Apartment+aut\",\n                \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n            },\n            {\n                \"id\": 8,\n                \"apartment_id\": 3,\n                \"image_url\": \"https://via.placeholder.com/800x600.png/003300?text=Apartment+dolores\",\n                \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n            },\n            {\n                \"id\": 9,\n                \"apartment_id\": 3,\n                \"image_url\": \"https://via.placeholder.com/800x600.png/00ffbb?text=Apartment+amet\",\n                \"created_at\": \"2025-12-24T02:31:00.000000Z\",\n                \"updated_at\": \"2025-12-24T02:31:00.000000Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL3JlZ2lzdGVyIiwiaWF0IjoxNzY2NjAwNzU0LCJleHAiOjE3NjY2MDQzNTQsIm5iZiI6MTc2NjYwMDc1NCwianRpIjoiMGpvdlNuRHpSOVZNUnpmOCIsInN1YiI6IjEzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.Gg0FfAgHUmJQIoDkiCH1lMByXLfrnezsPzi72mvj788",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments?title=m&description=m&city=m&address=m&price_per_day=23&rooms=3&bathrooms=3&area=4&Governorate=duu",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "m"
+						},
+						{
+							"key": "description",
+							"value": "m"
+						},
+						{
+							"key": "city",
+							"value": "m"
+						},
+						{
+							"key": "address",
+							"value": "m"
+						},
+						{
+							"key": "price_per_day",
+							"value": "23"
+						},
+						{
+							"key": "rooms",
+							"value": "3"
+						},
+						{
+							"key": "bathrooms",
+							"value": "3"
+						},
+						{
+							"key": "area",
+							"value": "4"
+						},
+						{
+							"key": "Governorate",
+							"value": "duu"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments?title=m&description=m&city=m&address=m&price_per_day=23&rooms=3&bathrooms=3&area=4&Governorate=duu",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "m"
+								},
+								{
+									"key": "description",
+									"value": "m"
+								},
+								{
+									"key": "city",
+									"value": "m"
+								},
+								{
+									"key": "address",
+									"value": "m"
+								},
+								{
+									"key": "price_per_day",
+									"value": "23"
+								},
+								{
+									"key": "rooms",
+									"value": "3"
+								},
+								{
+									"key": "bathrooms",
+									"value": "3"
+								},
+								{
+									"key": "area",
+									"value": "4"
+								},
+								{
+									"key": "Governorate",
+									"value": "duu"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 18:33:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Apartment created successfully\",\n    \"apartment\": {\n        \"title\": \"m\",\n        \"description\": \"m\",\n        \"city\": \"m\",\n        \"Governorate\": \"duu\",\n        \"address\": \"m\",\n        \"price_per_day\": \"23\",\n        \"rooms\": \"3\",\n        \"bathrooms\": \"3\",\n        \"area\": \"4\",\n        \"owner_id\": 13,\n        \"updated_at\": \"2025-12-24T18:33:40.000000Z\",\n        \"created_at\": \"2025-12-24T18:33:40.000000Z\",\n        \"id\": 21,\n        \"images\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NjAxNDY4LCJleHAiOjE3NjY2MDUwNjgsIm5iZiI6MTc2NjYwMTQ2OCwianRpIjoiYlQwOVFUWGpQdXh1b2Q2MiIsInN1YiI6IjEzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.HVB-89A7oBs1-elqHPvF1JFKH1lm2hWoYFzCTA1sau0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments/Update/21?title=m7&description=m7&city=m7&address=m7&price_per_day=237&rooms=37&bathrooms=37&area=47&Governorate=rrrrr",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments",
+						"Update",
+						"21"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "m7"
+						},
+						{
+							"key": "description",
+							"value": "m7"
+						},
+						{
+							"key": "city",
+							"value": "m7"
+						},
+						{
+							"key": "address",
+							"value": "m7"
+						},
+						{
+							"key": "price_per_day",
+							"value": "237"
+						},
+						{
+							"key": "rooms",
+							"value": "37"
+						},
+						{
+							"key": "bathrooms",
+							"value": "37"
+						},
+						{
+							"key": "area",
+							"value": "47"
+						},
+						{
+							"key": "Governorate",
+							"value": "rrrrr"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments?title=m&description=m&city=m&address=m&price_per_day=23&rooms=3&bathrooms=3&area=4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "m"
+								},
+								{
+									"key": "description",
+									"value": "m"
+								},
+								{
+									"key": "city",
+									"value": "m"
+								},
+								{
+									"key": "address",
+									"value": "m"
+								},
+								{
+									"key": "price_per_day",
+									"value": "23"
+								},
+								{
+									"key": "rooms",
+									"value": "3"
+								},
+								{
+									"key": "bathrooms",
+									"value": "3"
+								},
+								{
+									"key": "area",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Dec 2025 19:41:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Apartment created successfully\",\n    \"apartment\": {\n        \"title\": \"m\",\n        \"description\": \"m\",\n        \"city\": \"m\",\n        \"address\": \"m\",\n        \"price_per_day\": \"23\",\n        \"rooms\": \"3\",\n        \"bathrooms\": \"3\",\n        \"area\": \"4\",\n        \"owner_id\": 12,\n        \"updated_at\": \"2025-12-04T19:41:45.000000Z\",\n        \"created_at\": \"2025-12-04T19:41:45.000000Z\",\n        \"id\": 21,\n        \"images\": []\n    }\n}"
+				},
+				{
+					"name": "Owner",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/Update/5?title=m75&description=m75&city=m75&address=m75&price_per_day=2375&rooms=375&bathrooms=375&area=475",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"Update",
+								"5"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "m75"
+								},
+								{
+									"key": "description",
+									"value": "m75"
+								},
+								{
+									"key": "city",
+									"value": "m75"
+								},
+								{
+									"key": "address",
+									"value": "m75"
+								},
+								{
+									"key": "price_per_day",
+									"value": "2375"
+								},
+								{
+									"key": "rooms",
+									"value": "375"
+								},
+								{
+									"key": "bathrooms",
+									"value": "375"
+								},
+								{
+									"key": "area",
+									"value": "475"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 04 Dec 2025 19:48:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Invalid ,Sorry You Are not Owner\"\n}"
+				}
+			]
+		},
+		{
+			"name": "search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzY2NjAxNDY4LCJleHAiOjE3NjY2MDUwNjgsIm5iZiI6MTc2NjYwMTQ2OCwianRpIjoiYlQwOVFUWGpQdXh1b2Q2MiIsInN1YiI6IjEzIiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.HVB-89A7oBs1-elqHPvF1JFKH1lm2hWoYFzCTA1sau0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments/search?rooms=4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments",
+						"search"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "m7",
+							"disabled": true
+						},
+						{
+							"key": "address",
+							"value": "m7",
+							"disabled": true
+						},
+						{
+							"key": "price_per_day",
+							"value": "237",
+							"disabled": true
+						},
+						{
+							"key": "rooms",
+							"value": "4"
+						},
+						{
+							"key": "area",
+							"value": "47",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/search?rooms=4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"search"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "price_per_day",
+									"value": "237",
+									"disabled": true
+								},
+								{
+									"key": "rooms",
+									"value": "4"
+								},
+								{
+									"key": "area",
+									"value": "47",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 08:06:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"apartments\": [\n        {\n            \"id\": 1,\n            \"owner_id\": 5,\n            \"title\": \"Aut quod qui.\",\n            \"description\": \"Natus provident quia laborum aliquam aut officia vel et. Dolore sit fugiat dicta magni nobis omnis. Laborum hic consequatur iure culpa voluptatem sint.\",\n            \"city\": \"North Erikville\",\n            \"address\": \"3481 Treutel Glens Suite 596\\nEast Davon, CT 65403-6417\",\n            \"price_per_day\": \"167.22\",\n            \"rooms\": 4,\n            \"bathrooms\": 1,\n            \"area\": \"193.90\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 1,\n                    \"apartment_id\": 1,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ccee?text=Apartment+dolor\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 2,\n                    \"apartment_id\": 1,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0077ff?text=Apartment+delectus\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 3,\n                    \"apartment_id\": 1,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00aaaa?text=Apartment+ducimus\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 9,\n            \"owner_id\": 9,\n            \"title\": \"Sunt et provident quia.\",\n            \"description\": \"Facere est consequatur maxime voluptas et. Nihil sint labore eligendi quo porro assumenda. Et nesciunt incidunt sed.\",\n            \"city\": \"New Nicolaville\",\n            \"address\": \"99839 Johnston Crossroad Suite 042\\nEast Markushaven, DE 71572\",\n            \"price_per_day\": \"186.78\",\n            \"rooms\": 4,\n            \"bathrooms\": 3,\n            \"area\": \"231.19\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 25,\n                    \"apartment_id\": 9,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ddaa?text=Apartment+quibusdam\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 26,\n                    \"apartment_id\": 9,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00eecc?text=Apartment+qui\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 27,\n                    \"apartment_id\": 9,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0088ee?text=Apartment+quis\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 12,\n            \"owner_id\": 7,\n            \"title\": \"Et illum voluptas illo.\",\n            \"description\": \"Sit et voluptates optio aperiam amet quia magni. Rerum quibusdam quaerat aut minus et. Sit sequi laborum qui magni mollitia. Incidunt accusantium et cumque quam est. Et natus minima sint laboriosam animi.\",\n            \"city\": \"East Charlotte\",\n            \"address\": \"9939 Cassin Grove\\nNorth Rosiemouth, OH 64504\",\n            \"price_per_day\": \"131.93\",\n            \"rooms\": 4,\n            \"bathrooms\": 3,\n            \"area\": \"216.96\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 34,\n                    \"apartment_id\": 12,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ffff?text=Apartment+ut\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 35,\n                    \"apartment_id\": 12,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ccff?text=Apartment+alias\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 36,\n                    \"apartment_id\": 12,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00cc66?text=Apartment+accusamus\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 14,\n            \"owner_id\": 10,\n            \"title\": \"Rerum ex.\",\n            \"description\": \"Voluptatem dicta nobis deleniti aut dolorem molestiae quidem iste. Sunt at quas et assumenda similique. Id ipsa molestiae sint in et harum.\",\n            \"city\": \"Lake Gerdamouth\",\n            \"address\": \"886 Wolff Street Apt. 883\\nLucasport, PA 29153-0093\",\n            \"price_per_day\": \"163.89\",\n            \"rooms\": 4,\n            \"bathrooms\": 1,\n            \"area\": \"107.69\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 40,\n                    \"apartment_id\": 14,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ff11?text=Apartment+voluptas\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 41,\n                    \"apartment_id\": 14,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00ee33?text=Apartment+quia\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 42,\n                    \"apartment_id\": 14,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00aa99?text=Apartment+sed\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 16,\n            \"owner_id\": 7,\n            \"title\": \"Praesentium consequatur consequuntur.\",\n            \"description\": \"Omnis asperiores cum deserunt perspiciatis eius. Id neque illo debitis adipisci occaecati suscipit rerum. Accusamus eveniet quidem est qui voluptate quaerat qui. Adipisci exercitationem est autem.\",\n            \"city\": \"New Mose\",\n            \"address\": \"895 O'Hara Expressway\\nWest Etha, MI 99790\",\n            \"price_per_day\": \"180.68\",\n            \"rooms\": 4,\n            \"bathrooms\": 2,\n            \"area\": \"54.66\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 46,\n                    \"apartment_id\": 16,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/000011?text=Apartment+numquam\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 47,\n                    \"apartment_id\": 16,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/00aa88?text=Apartment+velit\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 48,\n                    \"apartment_id\": 16,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0099dd?text=Apartment+ut\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 19,\n            \"owner_id\": 10,\n            \"title\": \"Quod cumque ea doloribus aut.\",\n            \"description\": \"Iusto cum voluptatem dolorem quia consequuntur autem quo. Quia et laborum nesciunt dolores. Qui rerum accusamus aperiam nesciunt in est. Omnis distinctio consequatur ratione odit consectetur.\",\n            \"city\": \"East Richmond\",\n            \"address\": \"6544 Chelsey Port\\nElliebury, NV 62289\",\n            \"price_per_day\": \"67.04\",\n            \"rooms\": 4,\n            \"bathrooms\": 2,\n            \"area\": \"247.16\",\n            \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n            \"images\": [\n                {\n                    \"id\": 55,\n                    \"apartment_id\": 19,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/006622?text=Apartment+consequatur\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 56,\n                    \"apartment_id\": 19,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/003311?text=Apartment+delectus\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                },\n                {\n                    \"id\": 57,\n                    \"apartment_id\": 19,\n                    \"image_url\": \"https://via.placeholder.com/800x600.png/0033dd?text=Apartment+quisquam\",\n                    \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                    \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n                }\n            ]\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "rate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{933}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments/rate?booking_id=3&rating=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments",
+						"rate"
+					],
+					"query": [
+						{
+							"key": "booking_id",
+							"value": "3"
+						},
+						{
+							"key": "rating",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Unauthenticated",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"me"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "muhammad2",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "muhammad009002@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 25 Nov 2025 11:17:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+				},
+				{
+					"name": "Account",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/me",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"me"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "muhammad2",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "muhammad009002@gmail.com",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Nov 2025 04:03:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"Account is not approved by admin\"\n}"
+				},
+				{
+					"name": "checkout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/rate?booking_id=1&rating=2&review=hio",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"rate"
+							],
+							"query": [
+								{
+									"key": "booking_id",
+									"value": "1"
+								},
+								{
+									"key": "rating",
+									"value": "2"
+								},
+								{
+									"key": "review",
+									"value": "hio"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 09:08:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You can rate only after checkout\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/rate?booking_id=1&rating=2&comment=hio",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"rate"
+							],
+							"query": [
+								{
+									"key": "booking_id",
+									"value": "1"
+								},
+								{
+									"key": "rating",
+									"value": "2"
+								},
+								{
+									"key": "comment",
+									"value": "hio"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 09:20:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Rating submitted successfully\",\n    \"rating\": {\n        \"booking_id\": 1,\n        \"client_id\": 12,\n        \"apartment_id\": 10,\n        \"rating\": \"2\",\n        \"comment\": \"hio\",\n        \"updated_at\": \"2025-12-05T09:20:40.000000Z\",\n        \"created_at\": \"2025-12-05T09:20:40.000000Z\",\n        \"id\": 1\n    }\n}"
+				},
+				{
+					"name": "already",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/rate?booking_id=1&rating=5&comment=hio",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"rate"
+							],
+							"query": [
+								{
+									"key": "booking_id",
+									"value": "1"
+								},
+								{
+									"key": "rating",
+									"value": "5"
+								},
+								{
+									"key": "comment",
+									"value": "hio"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 09:22:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You already rated this booking\"\n}"
+				},
+				{
+					"name": "allowed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/rate?booking_id=3&rating=2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"rate"
+							],
+							"query": [
+								{
+									"key": "booking_id",
+									"value": "3"
+								},
+								{
+									"key": "rating",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 24 Dec 2025 18:45:54 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": \"You are not allowed to rate this apartment\"\n}"
+				}
+			]
+		},
+		{
+			"name": "apartments/{id}/ratings",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{933}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments/10/ratings",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments",
+						"10",
+						"ratings"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/10/ratings",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"10",
+								"ratings"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 09:26:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"ratings\": [\n        {\n            \"id\": 1,\n            \"apartment_id\": 10,\n            \"client_id\": 12,\n            \"booking_id\": 1,\n            \"rating\": 2,\n            \"comment\": \"hio\",\n            \"created_at\": \"2025-12-05T09:20:40.000000Z\",\n            \"updated_at\": \"2025-12-05T09:20:40.000000Z\",\n            \"client\": {\n                \"id\": 12,\n                \"role_id\": 1,\n                \"first_name\": \"muhammad\",\n                \"last_name\": \"alnabky\",\n                \"phone\": \"963993168005\",\n                \"birth_date\": \"1999-01-10\",\n                \"profile_image\": \"ttttttttttttttttttttttttttttttttttttttt\",\n                \"id_image\": \"eeeeeeeeeeeeeeeeeeeeeeeeeeeee\",\n                \"gender\": \"male\",\n                \"status\": \"approved\",\n                \"created_at\": \"2025-12-04T18:02:12.000000Z\",\n                \"updated_at\": \"2025-12-04T18:02:12.000000Z\"\n            }\n        }\n    ],\n    \"average\": 2\n}"
+				}
+			]
+		},
+		{
+			"name": "/Delete/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{933}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments/Delete/21",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments",
+						"Delete",
+						"21"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "owner",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/Delete/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"Delete",
+								"4"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "price_per_day",
+									"value": "237",
+									"disabled": true
+								},
+								{
+									"key": "rooms",
+									"value": "37",
+									"disabled": true
+								},
+								{
+									"key": "bathrooms",
+									"value": "37",
+									"disabled": true
+								},
+								{
+									"key": "area",
+									"value": "47",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 07:19:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Invalid, you are not the owner\"\n}"
+				},
+				{
+					"name": "found",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/Delete/21",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"Delete",
+								"21"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "price_per_day",
+									"value": "237",
+									"disabled": true
+								},
+								{
+									"key": "rooms",
+									"value": "37",
+									"disabled": true
+								},
+								{
+									"key": "bathrooms",
+									"value": "37",
+									"disabled": true
+								},
+								{
+									"key": "area",
+									"value": "47",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 07:35:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Apartment not found\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/apartments/Delete/22",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"apartments",
+								"Delete",
+								"22"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "address",
+									"value": "m7",
+									"disabled": true
+								},
+								{
+									"key": "price_per_day",
+									"value": "237",
+									"disabled": true
+								},
+								{
+									"key": "rooms",
+									"value": "37",
+									"disabled": true
+								},
+								{
+									"key": "bathrooms",
+									"value": "37",
+									"disabled": true
+								},
+								{
+									"key": "area",
+									"value": "47",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 07:36:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Apartment deleted successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "images\\{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{933}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments/images/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments",
+						"images",
+						"22"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "found",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/images/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"images",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 12:03:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Apartment not found\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/images/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"images",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 12:03:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"images\": {\n        \"id\": 10,\n        \"owner_id\": 7,\n        \"title\": \"Veniam optio cupiditate.\",\n        \"description\": \"In eveniet exercitationem temporibus qui dolorem. Maiores sit officia aspernatur similique. Est nobis est distinctio dolor ea exercitationem velit. Ut et repellat corrupti magni veritatis deleniti error.\",\n        \"city\": \"South Ubaldo\",\n        \"address\": \"74098 Lilyan Rapids Apt. 960\\nNew Clementine, LA 44611\",\n        \"price_per_day\": \"156.26\",\n        \"rooms\": 2,\n        \"bathrooms\": 2,\n        \"area\": \"173.78\",\n        \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n        \"updated_at\": \"2025-12-04T17:47:55.000000Z\",\n        \"images\": [\n            {\n                \"id\": 28,\n                \"apartment_id\": 10,\n                \"image_url\": \"https://via.placeholder.com/800x600.png/009922?text=Apartment+fugiat\",\n                \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n            },\n            {\n                \"id\": 29,\n                \"apartment_id\": 10,\n                \"image_url\": \"https://via.placeholder.com/800x600.png/006655?text=Apartment+quaerat\",\n                \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n            },\n            {\n                \"id\": 30,\n                \"apartment_id\": 10,\n                \"image_url\": \"https://via.placeholder.com/800x600.png/0099dd?text=Apartment+odit\",\n                \"created_at\": \"2025-12-04T17:47:55.000000Z\",\n                \"updated_at\": \"2025-12-04T17:47:55.000000Z\"\n            }\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "images\\{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{933}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image_url",
+							"type": "file",
+							"src": "postman-cloud:///1f0d1dd0-772f-4f80-b5cb-b3140c01052d"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments/images/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments",
+						"images",
+						"22"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/images/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"images",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 12:23:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Apartment not found\"\n}"
+				},
+				{
+					"name": "No images uploaded",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/images/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"images",
+								"10"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 12:26:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"No images uploaded\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": "postman-cloud:///1f0d1da7-6ad2-45e0-b2a7-d9a971936a4e"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/images/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"images",
+								"10"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 13:01:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Images stored successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "images/{id}",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{933}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/apartments/images/22",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"apartments",
+						"images",
+						"22"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "found",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/images/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"images",
+								"1"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 12:23:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Apartment not found\"\n}"
+				},
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "images",
+									"type": "file",
+									"src": "postman-cloud:///1f0d1d9e-ca61-40a0-a28c-9cf36247e331",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/images/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"images",
+								"10"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Host",
+							"value": "127.0.0.1:8000"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 05 Dec 2025 13:03:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Image deleted\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "admin",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "933",
+			"value": "",
+			"type": "default"
+		}
+	]
+}

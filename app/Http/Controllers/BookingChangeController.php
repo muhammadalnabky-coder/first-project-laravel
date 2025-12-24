@@ -20,7 +20,7 @@ class BookingChangeController extends Controller
         }
 
         if ($booking->client_id !==auth()->id()) {
-            return response()->json(['message' => 'Unauthorized'], 403);
+            return response()->json(['message' => 'The user is not the owner of the booking.'], 403);
         }
 
         $oldData = [
