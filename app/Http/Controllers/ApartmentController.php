@@ -113,6 +113,10 @@ class ApartmentController extends Controller
     {
         $apartments = Apartment::with('images')
 
+            ->when($req->Governorate, function ($q) use ($req) {
+                $q->where('Governorate', 'LIKE', "%{$req->Governorate}%");
+            })
+
             ->when($req->city, function ($q) use ($req) {
                 $q->where('city', 'LIKE', "%{$req->city}%");
             })
