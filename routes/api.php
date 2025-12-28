@@ -27,7 +27,7 @@ Route::group(['middleware' => ['auth:api', 'checkApproved']], function() {
     Route::get('me', [AuthController::class, 'me']);
     Route::post('logout', [AuthController::class, 'logout']);
     Route::post('UserImages/{id}', [AuthController::class, 'updateProfile']);
-
+//owner
 Route::prefix('owner')->group(function () {
     Route::get('/index', [OwnerController::class, 'index']);
     Route::get('/pending', [OwnerController::class, 'pendingUsers']);
@@ -88,7 +88,7 @@ Route::prefix('owner')->group(function () {
         Route::post('/cancel/{id}', [BookingController::class, 'cancel']);
     });
 
-    //Approved   ->middleware('check:')======================================================>>>>>
+    //Approved
     Route::prefix('admin')->middleware('check:create-user')->group(function () {
         Route::get('/index', [AdminController::class, 'index']);
         Route::get('/pending', [AdminController::class, 'pendingUsers']);
