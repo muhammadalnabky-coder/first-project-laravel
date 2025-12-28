@@ -56,8 +56,7 @@ class OwnerController extends Controller
 
     public function approveUser($id)
     {
-        $book = Booking::find($id);
-
+        $book=auth()->user()->bookings()->find($id);
         if (!$book) {
             return response()->json([
                 'status' => false,
@@ -76,7 +75,7 @@ class OwnerController extends Controller
 
     public function rejectUser($id)
     {
-        $book = Booking::find($id);
+        $book=auth()->user()->bookings()->find($id);
 
         if (!$book) {
             return response()->json([
@@ -96,7 +95,7 @@ class OwnerController extends Controller
 
     function deleteUser($id)
     {
-        $book = Booking::find($id);
+        $book=auth()->user()->bookings()->find($id);
 
         if (!$book) {
             return response()->json([
