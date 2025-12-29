@@ -7,6 +7,7 @@ use App\Models\Apartment;
 use App\Models\Booking;
 use App\Models\BookingChange;
 use App\Models\ChangeReservation;
+use App\Models\Notification;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -26,7 +27,7 @@ class BookingController extends Controller
     {
         $d=$req->validated();
 
-        $apartment = Apartment::find($d->apartment_id);
+        $apartment = Apartment::find($req->apartment_id);
 
         if (!$apartment) {
             return response()->json(['message' => 'Apartment not found'], 404);
@@ -65,6 +66,13 @@ class BookingController extends Controller
                 ];
 
             $booking = Booking::create($data);
+
+            $owner = $apartment->owner;
+            Notification::create([
+                'user_id' => $owner->id,
+                'title' => 'New Request',
+                'message' => 'Tenant Leader Request Your Apartment:' . $apartment->title,
+            ]);
 
             ChangeReservation::create([
                 'change_id'    => null,

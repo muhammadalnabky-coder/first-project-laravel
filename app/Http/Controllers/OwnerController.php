@@ -2,11 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Apartment;
 use App\Models\Booking;
-use App\Models\ChangeReservation;
-use App\Models\User;
-use Illuminate\Http\Request;
+use App\Models\Notification;
+
 
 class OwnerController extends Controller
 {
@@ -21,7 +19,7 @@ class OwnerController extends Controller
         ->get()
         ->map(function ($b) {
             return [
-                'booking_id' => $b->booking_id,
+                'booking_id' => $b->id,
                 'apartment'  => [
                     'id'    => optional($b->changeReservation?->apartment)->id,
                     'title' => optional($b->changeReservation?->apartment)->title,
@@ -31,6 +29,7 @@ class OwnerController extends Controller
                     'first_name' => $b->client->first_name,
                     'last_name'  => $b->client->last_name,
                 ],
+
                 'start_date'  => $b->start_date,
                 'end_date'    => $b->end_date,
                 'total_price' => $b->total_price,
@@ -73,7 +72,7 @@ class OwnerController extends Controller
             ->get()
             ->map(function ($b) {
                 return [
-                    'booking_id' => $b->booking_id,
+                    'booking_id' => $b->id,
                     'apartment'  => [
                         'id'    => optional($b->changeReservation?->apartment)->id,
                         'title' => optional($b->changeReservation?->apartment)->title,
@@ -122,7 +121,7 @@ class OwnerController extends Controller
             ->get()
             ->map(function ($b) {
                 return [
-                    'booking_id' => $b->booking_id,
+                    'booking_id' => $b->id,
                     'apartment'  => [
                         'id'    => optional($b->changeReservation?->apartment)->id,
                         'title' => optional($b->changeReservation?->apartment)->title,
@@ -170,7 +169,7 @@ class OwnerController extends Controller
             ->get()
             ->map(function ($b) {
                 return [
-                    'booking_id' => $b->booking_id,
+                    'booking_id' => $b->id,
                     'apartment'  => [
                         'id'    => optional($b->changeReservation?->apartment)->id,
                         'title' => optional($b->changeReservation?->apartment)->title,
@@ -214,6 +213,13 @@ class OwnerController extends Controller
         $book->owner_approval = 'approved';
         $book->save();
 
+
+        Notification::create([
+            'user_id' => $book->client->id,
+            'title' => 'Booking Approved',
+            'message' => 'Your booking for apartment :title has been approved.' . $book->changeReservation->apartment->title,
+        ]);
+
         return response()->json([
             'status' => true,
             'message' => 'owner approved successfully'
@@ -235,6 +241,13 @@ class OwnerController extends Controller
             ], 404);
         }
 
+        Notification::create([
+            'user_id' => $book->client->id,
+            'title' => 'Booking Rejected',
+            'message' => 'Your booking for apartment :title has been rejected' .$book->changeReservation->apartment->title,
+        ]);
+
+
         $book->owner_approval = 'rejected';
         $book->save();
 
@@ -246,10 +259,7 @@ class OwnerController extends Controller
 
     function deleteUser($id)
     {
-        $book = auth()->user()
-            ->apartmentBookings()
-            ->where('bookings.id', $id)
-            ->with(['client','changeReservation.apartment'])
+        $book = auth()->user() ->apartmentBookings()->where('bookings.id', $id)
             ->first();
 
         if (!$book) {
@@ -258,6 +268,12 @@ class OwnerController extends Controller
                 'message' => '$book not found'
             ], 404);
         }
+
+        Notification::create([
+            'user_id' =>$book->client->id,
+            'title' => 'Booking Deleted',
+            'message' => 'Your booking for apartment :title has been deleted by the owner' .$book->changeReservation->apartment->title,
+        ]);
 
         $book->delete();
 

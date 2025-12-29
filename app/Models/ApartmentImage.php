@@ -11,9 +11,13 @@ class ApartmentImage extends Model
     protected $guarded = [];
     protected $fillable = ['apartment_id', 'image_url'];
 
-    public function images()
+    public function apartments()
     {
-        return $this->hasMany(ApartmentImage::class, 'apartment_id');
+        return $this->hasMany(
+            Apartment::class,
+            'owner_id'
+        );
     }
+
 
 }

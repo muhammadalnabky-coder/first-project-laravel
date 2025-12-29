@@ -7,6 +7,7 @@ use App\Models\Apartment;
 use App\Models\Booking;
 use App\Models\BookingChange;
 use App\Models\ChangeReservation;
+use App\Models\Notification;
 use Illuminate\Support\Facades\Auth;
 
 class BookingChangeController extends Controller
@@ -22,6 +23,17 @@ class BookingChangeController extends Controller
         if ($booking->client_id !==auth()->id()) {
             return response()->json(['message' => 'The user is not the owner of the booking.'], 403);
         }
+        /*
+         * $apartment = Apartment::find($req->apartment_id);
+        $owner = $apartment->owner;
+
+        Notification::create([
+            'user_id' => $owner->id,
+            'title' => 'طلب تعديل حجز',
+            'message' => 'المستأجر طلب تعديل على الحجز رقم #' . $booking->id,
+        ]);
+         */
+
 
         $oldData = [
             'apartment_id' => $booking->changeReservation->apartment_id,

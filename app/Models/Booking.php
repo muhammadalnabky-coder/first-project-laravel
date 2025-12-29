@@ -24,4 +24,9 @@ class Booking extends Model
     {
         return $this->hasOne(ChangeReservation::class, 'booking_id');
     }
+    public function apartment()
+    {
+        return $this->belongsTo(Apartment::class);
+    }
+
 }

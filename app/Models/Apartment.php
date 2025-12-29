@@ -11,7 +11,7 @@ class Apartment extends Model
 
     protected $guarded = [];
 
-    public function owner()
+public function owner()
     {
         return $this->belongsTo(User::class, 'owner_id');
     }

@@ -10,7 +10,7 @@ class FavoriteController extends Controller
 {
     public function index()
     {
-        $data= auth()->user()->favorites()->with('apartment')->get();
+        $data= auth()->user()->favorites()->with('apartment.images')->get();
         if($data->isEmpty()){
             return response()->json(['message' => 'No favorites yet']);
         }
