@@ -26,7 +26,7 @@ class BookingController extends Controller
     {
         $d=$req->validated();
 
-        $apartment = Apartment::find($req->apartment_id);
+        $apartment = Apartment::find($d->apartment_id);
 
         if (!$apartment) {
             return response()->json(['message' => 'Apartment not found'], 404);
@@ -44,6 +44,7 @@ class BookingController extends Controller
                 })
                 ->lockForUpdate()
                 ->exists();
+
 
             if ($existing) {
                 return response()->json([

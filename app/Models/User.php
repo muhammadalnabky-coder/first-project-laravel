@@ -11,6 +11,7 @@ class User extends Authenticatable implements JWTSubject
 {
 
     use HasFactory, Notifiable;
+
     protected $guarded = [];
 
     protected $hidden = ['password', 'remember_token'];
@@ -81,5 +82,17 @@ class User extends Authenticatable implements JWTSubject
     public function changeReservations()
     {
         return $this->hasMany(change_reservation::class, 'owner_id');
+    }
+
+    public function apartmentBookings()
+    {
+        return $this->hasManyThrough(
+            Booking::class,           // الهدف النهائي
+            ChangeReservation::class, // الجدول الوسيط
+            'owner_id',               // FK في change_reservations يشير للـ users
+            'id',                     // FK في bookings
+            'id',                     // PK في users
+            'booking_id'              // FK في change_reservations يشير للـ bookings
+        );
     }
 }
