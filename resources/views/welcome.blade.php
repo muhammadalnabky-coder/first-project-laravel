@@ -275,3 +275,12 @@
         @endif
     </body>
 </html>
+<script>
+    const userId = {{ auth()->id() }};
+
+    window.Echo.private(`user.${userId}`)
+        .listen('NewNotification', (e) => {
+            alert(e.notification.message);
+            console.log('Notification:', e.notification);
+        });
+</script>
