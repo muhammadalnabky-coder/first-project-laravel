@@ -55,6 +55,7 @@ Route::prefix('owner')->group(function () {
         Route::get('/', [NotificationController::class, 'list']);
         Route::post('/create', [NotificationController::class, 'create']);
         Route::post('/{id}/read', [NotificationController::class, 'markRead']);
+        Route::post('/read-all', [NotificationController::class, 'markAllRead']);
     });
 
     //Apartment

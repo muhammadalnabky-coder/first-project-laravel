@@ -16,11 +16,13 @@ class NotificationController extends Controller
 
     public function markRead($id)
     {
-        $notif = Notification::where('user_id', auth()->id())->find($id);
+        $notif = Notification::where('id', $id)
+            ->where('user_id', auth()->id())
+            ->first();
+
         if (!$notif) {
             return response()->json(['error' => 'Notification not found'], 404);
         }
-
 
         $notif->update(['is_read' => true]);
 
@@ -43,4 +45,12 @@ class NotificationController extends Controller
 
         return response()->json($notif, 201);
     }
+
+    public function markAllRead()
+    {
+        auth()->user()->notifications()->update(['is_read' => true]);
+
+        return response()->json(['message' => 'All notifications marked as read']);
+    }
+
 }
