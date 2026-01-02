@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\NewNotification;
 use App\Models\Booking;
 use App\Models\Notification;
 
@@ -214,11 +215,12 @@ class OwnerController extends Controller
         $book->save();
 
 
-        Notification::create([
+        $notif= Notification::create([
             'user_id' => $book->client->id,
             'title' => 'Booking Approved',
             'message' => 'Your booking for apartment :title has been approved.' . $book->changeReservation->apartment->title,
         ]);
+        broadcast(new NewNotification($notif,$book->client->id,))->toOthers();
 
         return response()->json([
             'status' => true,
@@ -241,11 +243,12 @@ class OwnerController extends Controller
             ], 404);
         }
 
-        Notification::create([
+        $notif=Notification::create([
             'user_id' => $book->client->id,
             'title' => 'Booking Rejected',
             'message' => 'Your booking for apartment :title has been rejected' .$book->changeReservation->apartment->title,
         ]);
+        broadcast(new NewNotification($notif,$book->client->id,))->toOthers();
 
 
         $book->owner_approval = 'rejected';
@@ -269,11 +272,12 @@ class OwnerController extends Controller
             ], 404);
         }
 
-        Notification::create([
+        $notif= Notification::create([
             'user_id' =>$book->client->id,
             'title' => 'Booking Deleted',
             'message' => 'Your booking for apartment :title has been deleted by the owner' .$book->changeReservation->apartment->title,
         ]);
+        broadcast(new NewNotification($notif,$book->client->id,))->toOthers();
 
         $book->delete();
 

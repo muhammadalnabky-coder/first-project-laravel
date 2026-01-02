@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\NewNotification;
 use App\Http\Requests\storeBookingRequest;
 use App\Models\Apartment;
 use App\Models\Booking;
@@ -68,11 +69,12 @@ class BookingController extends Controller
             $booking = Booking::create($data);
 
             $owner = $apartment->owner;
-            Notification::create([
+            $notif= Notification::create([
                 'user_id' => $owner->id,
                 'title' => 'New Request',
                 'message' => 'Tenant Leader Request Your Apartment:' . $apartment->title,
             ]);
+            broadcast(new NewNotification($notif, $owner->id))->toOthers();
 
             ChangeReservation::create([
                 'change_id'    => null,
